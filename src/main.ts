@@ -5,11 +5,13 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import { setupLayouts } from 'virtual:generated-layouts';
 import generatedRoutes from 'virtual:generated-pages';
 
+import 'virtual:windi.css';
+
 const routes = setupLayouts(generatedRoutes);
 const history = createWebHashHistory();
-const router = createRouter({ routes, history });
+const scrollBehavior = () => ({ top: 0 });
+const router = createRouter({ routes, history, scrollBehavior });
 
-import 'virtual:windi.css';
 
 createApp(App)
     .use(router)

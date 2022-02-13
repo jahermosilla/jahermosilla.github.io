@@ -1,11 +1,16 @@
-# Vue 3 + Typescript + Vite
+# My personal website
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is the project for my personal website. It's a Vue 3 project created with Vite.
 
-## Recommended IDE Setup
+This project is heavily inspired in the Vitese Starter project, and it uses some of the Vite plugins and features that Vitese uses, such as:
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
-## Type Support For `.vue` Imports in TS
+- 🗂 [File based routing](https://github.com/hannoeru/vite-plugin-pages)
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+- 📦 [Components auto importing](https://github.com/antfu/unplugin-vue-components)
+
+- 📑 [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
+
+- 🎨 [Windi CSS](https://github.com/windicss/windicss) - next generation utility-first CSS framework
+
+- 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly

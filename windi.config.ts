@@ -1,17 +1,35 @@
-import { defineConfig } from 'windicss/helpers'
-// import colors from 'windicss/colors'
+import { defineConfig } from 'windicss/helpers';
+import colors from 'windicss/colors';
 import typography from 'windicss/plugin/typography'
+
+const primary = colors.blue;
 
 export default defineConfig({
   darkMode: 'class',
 
-  attributify: {
-    prefix: 'w:'
-  },
+  // attributify: {
+  //   prefix: 'w:'
+  // },
 
   plugins: [
-    typography(),
+    typography()
   ],
+
+  shortcuts: {
+    'page-padding': 'px-10 lg:px-30 xl:px-60'
+  },
+
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: primary['500'],
+          dark: primary['400']
+        }
+      }
+    }
+  },
+
   // theme: {
   //   extend: {
   //     typography: {

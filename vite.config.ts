@@ -7,10 +7,11 @@ import layouts from 'vite-plugin-vue-layouts';
 import autoImport from 'unplugin-auto-import/vite';
 import autoImportComponents from 'unplugin-vue-components/vite';
 import windiCSS from 'vite-plugin-windicss';
+import icons from 'unplugin-icons/vite';
+import iconsResolver from 'unplugin-icons/resolver';
 
 import { Options as AutoImportOptions } from 'unplugin-auto-import/dist/types';
 import { Options as AutoImportComponentsOptions } from 'unplugin-vue-components/dist/types';
-
 
 const alias = {
   '~/': `${path.resolve(__dirname, 'src')}/`,
@@ -21,7 +22,7 @@ const autoImportOptions: AutoImportOptions = {
   imports: [
     'vue',
     'vue-router',
-    '@vueuse/core'
+    '@vueuse/core',
   ],
 
   dts: "./src/auto-import.d.ts"
@@ -30,6 +31,10 @@ const autoImportOptions: AutoImportOptions = {
 // https://github.com/antfu/unplugin-vue-components
 const autoImportComponentsOptions : AutoImportComponentsOptions = {
   extensions: ['vue'],
+  resolvers: [
+    // https://github.com/antfu/unplugin-icons
+    iconsResolver({ prefix: false })
+  ],
   dts: './src/components.d.ts'
 }
 
@@ -45,6 +50,7 @@ export default defineConfig({
     layouts(),
     autoImport(autoImportOptions),
     autoImportComponents(autoImportComponentsOptions),
-    windiCSS()
+    windiCSS(),
+    icons({ autoInstall: true })
   ]
 });
