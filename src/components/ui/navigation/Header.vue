@@ -11,19 +11,29 @@ const props = defineProps<Props>();
 
 const { items, height } = toRefs(props);
 
+
 // Navigation scroll and size utilities
 const header: Ref<HTMLElement | null> = ref(null);
-const { shadowClass, showBackdrop, translate, navOpened, isMobile } = toRefs(useNavigationMenu(header));
+const {
+    toggle,
+    navOpened,
+    translate,
+    isMobile,
+    isTopReached,
+    showBackdrop
+} = toRefs(useNavigationMenu(header));
+
+const computedHeight = computed(() => isTopReached.value ? '8rem' : height.value);
+const shadowClass = computed(() => isTopReached.value ? 'shadow-none' : 'shadow-md');
 </script>
 
 <template>
     <header
         ref="header"
-        class="transition-transform duration-150 z-10"
         :class="shadowClass"
         :style="{ transform: navOpened ? 'translateY(0%)' : translate ? 'translateY(-100%)' : 'translateY(0%)' }"
     >
-        <Backdrop :visible="showBackdrop" @click="navOpened = !navOpened" />
+        <Backdrop @click="toggle" :visible="showBackdrop" />
 
         <!-- Prepend items-->
         <slot name="prepend" />
@@ -40,13 +50,17 @@ const { shadowClass, showBackdrop, translate, navOpened, isMobile } = toRefs(use
             <slot name="append-inner" />
         </Navigation>
 
+        <div class="ml-8"></div>
+
         <!-- Append items after navigation -->
         <slot name="append" />
+
+        <div class="ml-8"></div>
 
         <Transition name="translate-left" mode="out-in">
             <Hamburguer
                 v-if="isMobile"
-                @click="navOpened = !navOpened"
+                @click="toggle"
                 :opened="navOpened"
                 class="transition z-10"
             />
@@ -56,9 +70,10 @@ const { shadowClass, showBackdrop, translate, navOpened, isMobile } = toRefs(use
 
 <style scoped>
 header {
-    min-height: v-bind(height);
     position: fixed;
     top: 0px;
+    height: v-bind(computedHeight);
+    transition: transform 0.2s ease-in, height 0.2s ease-in;
 
     @apply page-padding
         fixed
@@ -85,11 +100,11 @@ header {
 
 .translate-left-enter-from,
 .translate-left-leave-to {
-    @apply translate-x-[200px];
+    transform: translateX(200px);
 }
 
 .translate-left-leave-from,
 .translate-left-enter-to {
-    @apply translate-x-0;
+    transform: translateX(0px);
 }
 </style>

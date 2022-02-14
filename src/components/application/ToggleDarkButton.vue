@@ -6,13 +6,17 @@ const toggleDark = useToggle(isDark);
 <template>
     <JButton icon @click="() => toggleDark()">
         <Transition name="scale" mode="out-in">
-            <MdiWeatherNight v-if="isDark" class="text-primary-dark" />
-            <MdiWhiteBalanceSunny v-else class="text-primary" />
+            <MdiWeatherNight v-if="isDark" class="icon text-primary-dark" />
+            <MdiWhiteBalanceSunny v-else class="icon text-primary" />
         </Transition>
     </JButton>
 </template>
 
 <style scoped>
+.icon {
+    @apply text-xl;
+}
+
 .scale-enter-active,
 .scale-leave-active {
     @apply scale-100;

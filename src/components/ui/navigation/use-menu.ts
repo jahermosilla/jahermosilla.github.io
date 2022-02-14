@@ -2,10 +2,11 @@ import { Ref, watchPostEffect } from "vue";
 
 const translate = ref(false);
 const navOpened = ref(false);
+const toggle = () => navOpened.value = !navOpened.value;
 
 export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
     const scroll = useScroll(window);
-    const isMobile = useMediaQuery('(max-width: 1024px)');
+    const isMobile = useMediaQuery('(max-width: 768px)');
 
     // Show header when scrolling up
     const unwatchScrollTop = watchPostEffect(() => {
@@ -30,12 +31,6 @@ export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
         document.getElementById('app')!.style.marginRight = navOpened.value ? '-21px !important' : '0px';
     });
 
-    // Shadow class applied to the header
-    const shadowClass = computed(() => scroll.arrivedState.top ? 'shadow-none' : 'shadow-lg');
-
-    // Show backdrop
-    const showBackdrop = computed(() => isMobile.value && navOpened.value);
-
     // Focus on active link when nav is opened (mobile)
     function focusActiveLink() {
         // (header.value.querySelector('ul a:first-child')! as HTMLAnchorElement).focus();
@@ -59,10 +54,11 @@ export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
     });
 
     return reactive({
+        toggle,
+        navOpened: readonly(navOpened),
+        translate: readonly(translate),
         isMobile,
-        navOpened,
-        translate,
-        shadowClass,
-        showBackdrop
+        isTopReached: computed(() => scroll.arrivedState.top),
+        showBackdrop: computed(() => isMobile.value && navOpened.value)
     })
 }

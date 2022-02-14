@@ -18,7 +18,7 @@ const items = [{
         <p class="font-bold text-2xl">JHR</p>
       </template>
 
-      <template #append-inner>
+      <template #append>
         <ToggleDarkButton />
       </template>
     </Header>
@@ -36,12 +36,6 @@ const items = [{
 .j-container {
   --header-height: 4.5rem;
   --content-height: calc(100vh - var(--header-height));
-}
-
-.custom-text-gradient {
-  @apply /* bg-gradient-to-r from-primary-500 to-primary-400
-    dark:from-primary-dark-500 dark:to-primary-dark-400 */
-    bg-clip-text text-transparent;
 }
 
 .translate-right-enter-active,

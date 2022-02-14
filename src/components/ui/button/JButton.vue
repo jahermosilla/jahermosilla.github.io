@@ -27,7 +27,7 @@ const { icon } = toRefs(props);
 
 .j-button.icon {
     @apply rounded-full
-        p-2
+        p-3
         bg-gray-400/5 hover:bg-gray-400/20;
 }
 </style>

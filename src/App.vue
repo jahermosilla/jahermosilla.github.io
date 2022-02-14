@@ -10,6 +10,10 @@ body {
   font-family: Poppins, system-ui !important;
 }
 
+a {
+  @apply relative;
+}
+
 a:after {
   @apply content-[''] absolute -bottom-2 left-0 w-full h-1 bg-primary dark:bg-primary-dark rounded-sm transition-transform duration-100 transform scale-x-0;
 }

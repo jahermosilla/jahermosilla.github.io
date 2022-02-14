@@ -3,7 +3,7 @@ const props = withDefaults(defineProps<{ opened?: boolean }>(), { opened: false 
 </script>
 
 <template>
-    <JButton icon class="!p-2" style="aspect-ratio: 1;">
+    <JButton icon style="aspect-ratio: 1;">
         <div :class="{ close: props.opened }" class="relative inline-block w-[24px] h-[24px]">
             <div class="hamburguer"></div>
         </div>
