@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Ref } from 'vue';
+import { Ref, TeleportProps } from 'vue';
 import useNavigationMenu from './use-menu';
 
 interface Props {
@@ -10,7 +10,6 @@ interface Props {
 const props = defineProps<Props>();
 
 const { items, height } = toRefs(props);
-
 
 // Navigation scroll and size utilities
 const header: Ref<HTMLElement | null> = ref(null);
@@ -40,7 +39,7 @@ const shadowClass = computed(() => isTopReached.value ? 'shadow-none' : 'shadow-
 
         <div class="spacer-left" />
 
-        <Navigation :class="{ mobile: isMobile, opened: navOpened }">
+        <Navigation class="z-30" :class="{ mobile: isMobile, opened: navOpened }">
             <!-- Prepend inner items -->
             <slot name="prepend-inner" />
 
@@ -62,7 +61,7 @@ const shadowClass = computed(() => isTopReached.value ? 'shadow-none' : 'shadow-
                 v-if="isMobile"
                 @click="toggle"
                 :opened="navOpened"
-                class="transition z-10"
+                class="transition z-30"
             />
         </Transition>
     </header>
@@ -73,7 +72,7 @@ header {
     position: fixed;
     top: 0px;
     height: v-bind(computedHeight);
-    transition: transform 0.2s ease-in, height 0.2s ease-in;
+    transition: transform 0.1s ease-in, height 0.2s ease-in;
 
     @apply page-padding
         fixed

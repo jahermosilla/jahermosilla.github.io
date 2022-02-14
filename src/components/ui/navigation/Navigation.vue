@@ -1,6 +1,5 @@
 <template>
-    <!--:class="{ mobile: isMobile, opened: navOpened }"-->
-    <nav class="navigation ml-10 z-2">
+    <nav class="navigation ml-10">
         <ul class="flex items-center space-x-8">
             <slot />
         </ul>

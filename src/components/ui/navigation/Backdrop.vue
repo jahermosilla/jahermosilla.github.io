@@ -9,15 +9,13 @@ const props = defineProps<{ visible: boolean }>();
 </script>
 
 <template>
-    <Teleport to="#app">
-        <Transition name="fade">
-            <div
-                v-bind="$attrs"
-                v-if="props.visible"
-                class="fixed top-0 z-10 bg-gray-600/60 inset-0 h-screen backdrop-filter backdrop-blur-[8px]"
-            />
-        </Transition>
-    </Teleport>
+    <Transition name="fade">
+        <div
+            v-bind="$attrs"
+            v-if="props.visible"
+            class="fixed top-0 z-20 bg-gray-600/60 inset-0 h-screen backdrop-filter backdrop-blur-[8px]"
+        />
+    </Transition>
 </template>
 
 <style scoped>

@@ -19,7 +19,7 @@ const items = [{
       </template>
 
       <template #append>
-        <ToggleDarkButton />
+        <ToggleDarkButton class="z-30" />
       </template>
     </Header>
 
@@ -28,7 +28,6 @@ const items = [{
         <Component :is="component" :key="route.path" />
       </Transition>
     </RouterView>
-    <!-- <Page></Page> -->
   </Container>
 </template>
 
