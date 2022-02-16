@@ -2,12 +2,20 @@ import { Ref, watchPostEffect } from "vue";
 
 const translate = ref(false);
 const navOpened = ref(false);
+const scroll = useScroll(window);
+const isMobile = useMediaQuery('(max-width: 768px)');
+const showBackdrop = computed(() => isMobile.value && navOpened.value);
+
 const toggle = () => navOpened.value = !navOpened.value;
 
-export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
-    const scroll = useScroll(window);
-    const isMobile = useMediaQuery('(max-width: 768px)');
+export function useNavigationMenuActions() {
+    return {
+        toggle,
+        showBackdrop
+    }
+}
 
+export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
     // Show header when scrolling up
     const unwatchScrollTop = watchPostEffect(() => {
         if (scroll.directions.top) translate.value = false;
@@ -24,11 +32,9 @@ export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
         if (!isMobile.value) navOpened.value = false;
     });
 
-    // Prevent glitches when hidding the overflow scroll content
+    // Hides the scrollbar when the nav is opened in mobile
     const unwatchNavOpened = watchEffect(() => {
         document.body.style.overflowY = navOpened.value ? 'hidden' : 'auto';
-        document.getElementById('app')!.style.paddingRight = navOpened.value ? '21px !imortant' : '0px';
-        document.getElementById('app')!.style.marginRight = navOpened.value ? '-21px !important' : '0px';
     });
 
     // Focus on active link when nav is opened (mobile)
@@ -58,7 +64,7 @@ export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
         navOpened: readonly(navOpened),
         translate: readonly(translate),
         isMobile,
+        showBackdrop,
         isTopReached: computed(() => scroll.arrivedState.top),
-        showBackdrop: computed(() => isMobile.value && navOpened.value)
     })
 }

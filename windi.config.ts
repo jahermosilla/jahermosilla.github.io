@@ -16,7 +16,7 @@ export default defineConfig({
   ],
 
   shortcuts: {
-    'page-padding': 'px-10 lg:px-30 xl:px-60'
+    'page-padding': 'px-8 md:px-16 lg:px-24 xl:px-48 2xl:px-60'
   },
 
   theme: {

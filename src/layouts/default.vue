@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useNavigationMenuActions } from '~/components/ui/navigation/use-menu';
+
 const items = [{
   name: 'Home',
   href: '/'
@@ -9,6 +11,10 @@ const items = [{
   name: 'Blog',
   href: '/blog'
 }];
+
+const scroll = useScroll(window);
+const height = computed(() => `var(${scroll.arrivedState.top ? '--header-expanded-height' : '--header-default-height'})`);
+const { toggle, showBackdrop } = useNavigationMenuActions();
 </script>
 
 <template>
@@ -19,9 +25,11 @@ const items = [{
       </template>
 
       <template #append>
-        <ToggleDarkButton class="z-30" />
+        <ToggleDarkButton />
       </template>
     </Header>
+
+    <Backdrop @click="toggle" :visible="showBackdrop" />
 
     <RouterView v-slot="{ Component: component, route }">
       <Transition name="translate-right">
@@ -33,7 +41,10 @@ const items = [{
 
 <style scoped>
 .j-container {
-  --header-height: 4.5rem;
+  --header-default-height: 4.5rem;
+  --header-expanded-height: 6rem;
+
+  --header-height: v-bind(height);
   --content-height: calc(100vh - var(--header-height));
 }
 

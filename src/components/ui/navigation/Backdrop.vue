@@ -13,7 +13,7 @@ const props = defineProps<{ visible: boolean }>();
         <div
             v-bind="$attrs"
             v-if="props.visible"
-            class="fixed top-0 z-20 bg-gray-600/60 inset-0 h-screen backdrop-filter backdrop-blur-[8px]"
+            class="fixed top-0 z-10 bg-gray-600/60 inset-0 h-screen backdrop-filter backdrop-blur-md"
         />
     </Transition>
 </template>

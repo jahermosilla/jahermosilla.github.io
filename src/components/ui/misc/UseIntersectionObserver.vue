@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const props = defineProps<{ component: string }>();
+import { Component } from 'vue';
+
+const props = defineProps<{ component: () => Promise<Component> }>();
 
 
 let resolve: CallableFunction | null = null;
@@ -29,7 +31,7 @@ const AsyncComponent = defineAsyncComponent(() =>
         .resolve()
         .then(waitForIntersection)
         .then(stop)
-        .then(() => import(`../../${props.component}`))
+        .then(props.component)
 );
 
 </script>

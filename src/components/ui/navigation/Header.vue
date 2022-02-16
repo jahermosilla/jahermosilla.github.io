@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Ref, TeleportProps } from 'vue';
+import { Ref } from 'vue';
 import useNavigationMenu from './use-menu';
 
 interface Props {
@@ -18,28 +18,26 @@ const {
     navOpened,
     translate,
     isMobile,
-    isTopReached,
-    showBackdrop
+    isTopReached
 } = toRefs(useNavigationMenu(header));
 
-const computedHeight = computed(() => isTopReached.value ? '8rem' : height.value);
 const shadowClass = computed(() => isTopReached.value ? 'shadow-none' : 'shadow-md');
 </script>
 
 <template>
     <header
         ref="header"
-        :class="shadowClass"
+        :class="[shadowClass, { opened: navOpened }]"
         :style="{ transform: navOpened ? 'translateY(0%)' : translate ? 'translateY(-100%)' : 'translateY(0%)' }"
     >
-        <Backdrop @click="toggle" :visible="showBackdrop" />
-
         <!-- Prepend items-->
-        <slot name="prepend" />
+        <div class="z-30">
+            <slot name="prepend" />
+        </div>
 
         <div class="spacer-left" />
 
-        <Navigation class="z-30" :class="{ mobile: isMobile, opened: navOpened }">
+        <Navigation class="z-20" :class="{ mobile: isMobile, opened: navOpened }">
             <!-- Prepend inner items -->
             <slot name="prepend-inner" />
 
@@ -52,16 +50,16 @@ const shadowClass = computed(() => isTopReached.value ? 'shadow-none' : 'shadow-
         <div class="ml-8"></div>
 
         <!-- Append items after navigation -->
-        <slot name="append" />
-
-        <div class="ml-8"></div>
+        <div class="z-20">
+            <slot name="append" />
+        </div>
 
         <Transition name="translate-left" mode="out-in">
             <Hamburguer
                 v-if="isMobile"
                 @click="toggle"
                 :opened="navOpened"
-                class="transition z-30"
+                class="ml-8 transition z-20"
             />
         </Transition>
     </header>
@@ -69,21 +67,27 @@ const shadowClass = computed(() => isTopReached.value ? 'shadow-none' : 'shadow-
 
 <style scoped>
 header {
-    position: fixed;
-    top: 0px;
-    height: v-bind(computedHeight);
+    height: v-bind(height);
     transition: transform 0.1s ease-in, height 0.2s ease-in;
 
     @apply page-padding
         fixed
         top-0
-        z-10
+        z-20
         bg-gray-100/80 dark:bg-gray-800/80
         backdrop-filter backdrop-blur-md
         flex items-center
         w-full
         font-medium
         text-md;
+}
+
+header.opened {
+    @apply bg-transparent pointer-events-none shadow-none;
+}
+
+header.opened * {
+    @apply pointer-events-auto;
 }
 
 .spacer-left {

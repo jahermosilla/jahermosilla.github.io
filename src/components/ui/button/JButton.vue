@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface JButtonProps {
-    icon: boolean
+    icon?: boolean
 }
 
 
@@ -22,12 +22,14 @@ const { icon } = toRefs(props);
 
 <style>
 .j-button {
-    @apply flex items-center transition-colors;
+    @apply flex items-center py-2 px-4 w-[fit-content] rounded-sm transition-colors
+        text-white dark:text-black;
 }
 
 .j-button.icon {
     @apply rounded-full
-        p-3
+        p-2
+        text-current
         bg-gray-400/5 hover:bg-gray-400/20;
 }
 </style>

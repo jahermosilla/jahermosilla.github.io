@@ -4,30 +4,12 @@
             class="slide-right !bg-transparent"
             style="--grid-row: 2 / span 2; --grid-col: 2 / span 2;"
         >
-            <FaceImage class="min-w-40 group-hover:(stroke-transparent fill-current)" />
+            <FaceImage class="image-face group-hover:(stroke-transparent fill-current)" />
         </div>
 
         <div class="j-square j-square--right" style="--grid-row: 1 / span 3; --grid-col: 4;" />
 
         <div class="j-square j-square--left" style="--grid-row: 2 / span 3; --grid-col: 1;" />
-
-        <div
-            class="slide-right flex justify-center items-center"
-            style="--grid-row: 4; --grid-col: 2;"
-        >
-            <JButton icon class="j-background-links">
-                <MdiGithub />
-            </JButton>
-        </div>
-
-        <div
-            class="slide-right flex justify-center items-center"
-            style="--grid-row: 4; --grid-col: 3;"
-        >
-            <JButton icon class="j-background-links">
-                <MdiLinkedin />
-            </JButton>
-        </div>
     </div>
 </template>
 
@@ -42,12 +24,15 @@
         grid-cols-4
         grid-rows-4
         gap-4
-        bg-primary-dark
-        dark:(bg-primary);
+        bg-gradient-to-r
+        from-primary
+        to-purple-500
+        dark:(from-primary-dark to-purple-400);
 }
 
-.j-background-links {
-    @apply text-[1.8rem] text-gray-100 dark:text-gray-800;
+.image-face {
+    @apply dark:text-dark-700 text-light-100;
+    min-width: 100%;
 }
 
 .j-background > * {
