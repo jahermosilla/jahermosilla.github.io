@@ -3,6 +3,10 @@
 </template>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-gray-100 text-gray-700
     dark:(bg-gray-800 text-gray-100);
@@ -21,11 +25,14 @@ a:after,
 }
 
 a:hover:after,
-.featured-word:hover:after {
+a:focus:after,
+.featured-word:hover:after,
+.featured-word:focus:after {
   @apply scale-x-100;
 }
 
 a:not(.router-link-active):hover,
+a:not(.router-link-active):focus,
 .featured-word {
   @apply text-primary dark:text-primary-dark;
 }

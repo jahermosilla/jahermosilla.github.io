@@ -13,16 +13,16 @@
             <h1 class="text-6xl font-extrabold">Jose Hermosilla Rodrigo</h1>
 
             <ol
-                class="mt-4 text-xl font-bold bg-gradient-to-l from-primary to-purple-500 dark:(from-primary-dark to-purple-400) bg-clip-text text-transparent"
+                class="mt-4 text-xl font-bold bg-gradient-to-l from-primary to-secondary dark:(from-primary-dark to-secondary-dark) bg-clip-text text-transparent"
             >
                 <li>Software crafter</li>
                 <li>Geomatics Engineer (GIS & Cartography)</li>
                 <li>Just another human being</li>
             </ol>
 
-            <JButton class="mt-4 bg-primary dark:bg-primary-dark">
-                Want to know more?
-                <MdiArrowDown class="ml-2" />
+            <JButton component="a" href="/#/#about-section" primary cta class="featured-word mt-4">
+                <div class="mr-2">Want to know more?</div>
+                <MdiArrowDown class="ml-auto" />
             </JButton>
         </div>
     </JSection>

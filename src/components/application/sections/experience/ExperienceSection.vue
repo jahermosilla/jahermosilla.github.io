@@ -1,51 +1,46 @@
 <script setup lang="ts">
-const experiences = [
-    {
-        type: 'education',
-        title: 'Degree in Geomatics Engineering and Survey',
-        place: 'Universitat Politècnica de València (UPV)',
-        duration: []
-    },
-    {
-        type: 'education',
-        title: 'Master in Geomatics Engineering and Geoinformation',
-        place: 'Universitat Politècnica de València (UPV)',
-        duration: []
-    },
-    {
-        type: 'work',
-        title: 'Full Stack Developer',
-        place: 'Green Urban Data SL',
-        duration: []
-    },
-    {
-        type: 'work',
-        title: 'Full Stack Developer',
-        place: 'Prodevelop SL',
-        duration: []
-    }
-];
+import experiences from './experience'
+
+import MdiSchoolOutline from '~icons/mdi/school-outline';
+import MdiHandshakeOutline from '~icons/mdi/handshake-outline';
+
+const computeIcon = (experienceType: string) => experienceType === 'education'
+    ? MdiSchoolOutline
+    : MdiHandshakeOutline;
 </script>
 
 <template>
     <JSection title="Experience">
+        <p
+            class="mb-2"
+        >I have kinda scientific background and profesional experience developing web applications:</p>
+
         <JTimeline>
             <JTimelineItem v-for="experience in experiences">
                 <template #icon>
-                    <MdiSchoolOutline v-if="experience.type === 'education'" />
-                    <MdiHandshakeOutline v-if="experience.type === 'work'" />
+                    <Component :is="computeIcon(experience.type)" />
                 </template>
+
                 <JCard>
                     <h1 class="font-bold">{{ experience.title }}</h1>
                     <h1 class="text-sm text-primary dark:text-primary-dark">{{ experience.place }}</h1>
 
-                    <h4
-                        class="text-gray-400"
-                    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tempore laudantium magnam quae vel ipsam molestiae ex corporis quidem cupiditate?</h4>
+                    <ResizableContainer :height="80" class="my-1">
+                        <Component :is="experience.description" />
+                    </ResizableContainer>
 
-                    <p class="text-sm">Lorem ipsum dolor sit.</p>
+                    <p class="text-sm">{{ experience.duration[0] }} - {{ experience.duration[1] }}</p>
                 </JCard>
             </JTimelineItem>
         </JTimeline>
+
+        <p class="mt-6 mb-2">I have also made a lot of courses</p>
+
+        <!-- <FeaturedCourses /> -->
+
+        <JButton component="a" primary cta>
+            See the full list
+            <MdiArrowRight class="ml-auto" />
+        </JButton>
     </JSection>
 </template>

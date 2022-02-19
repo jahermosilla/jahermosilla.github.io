@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Ref } from 'vue';
 import { useNavigationMenuActions } from '~/components/ui/navigation/use-menu';
 
 const items = [{
@@ -12,7 +13,7 @@ const items = [{
   href: '/blog'
 }];
 
-const scroll = useScroll(window);
+const scroll = import.meta.env.SSR ? useScroll(null) : useScroll(window);
 const height = computed(() => `var(${scroll.arrivedState.top ? '--header-expanded-height' : '--header-default-height'})`);
 const { toggle, showBackdrop } = useNavigationMenuActions();
 </script>
@@ -29,7 +30,9 @@ const { toggle, showBackdrop } = useNavigationMenuActions();
       </template>
     </Header>
 
-    <Backdrop @click="toggle" :visible="showBackdrop" />
+    <ClientOnly>
+      <Backdrop @click="toggle" :visible="showBackdrop" />
+    </ClientOnly>
 
     <RouterView v-slot="{ Component: component, route }">
       <Transition name="translate-right">
@@ -41,6 +44,7 @@ const { toggle, showBackdrop } = useNavigationMenuActions();
 
 <style scoped>
 .j-container {
+  margin: 0px;
   --header-default-height: 4.5rem;
   --header-expanded-height: 6rem;
 

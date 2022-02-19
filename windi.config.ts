@@ -3,6 +3,7 @@ import colors from 'windicss/colors';
 import typography from 'windicss/plugin/typography'
 
 const primary = colors.blue;
+const secondary = colors.purple;
 
 export default defineConfig({
   darkMode: 'class',
@@ -25,7 +26,12 @@ export default defineConfig({
         primary: {
           DEFAULT: primary['500'],
           dark: primary['400']
-        }
+        },
+        secondary: {
+          DEFAULT: secondary['500'],
+          dark: secondary['400']
+        },
+
       }
     }
   },

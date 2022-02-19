@@ -29,7 +29,7 @@ const autoImportOptions: AutoImportOptions = {
 }
 
 // https://github.com/antfu/unplugin-vue-components
-const autoImportComponentsOptions : AutoImportComponentsOptions = {
+const autoImportComponentsOptions: AutoImportComponentsOptions = {
   extensions: ['vue'],
   resolvers: [
     // https://github.com/antfu/unplugin-icons
@@ -51,6 +51,6 @@ export default defineConfig({
     autoImport(autoImportOptions),
     autoImportComponents(autoImportComponentsOptions),
     windiCSS(),
-    icons({ autoInstall: true })
+    icons({ autoInstall: true, compiler: 'vue3' })
   ]
 });

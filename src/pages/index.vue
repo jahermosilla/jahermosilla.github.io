@@ -3,20 +3,30 @@ import UseIntersectionObserver from '~/components/ui/misc/UseIntersectionObserve
 
 const AboutSection = () => import('~/components/application/sections/about/AboutSection.vue');
 const ExperienceSection = () => import('~/components/application/sections/experience/ExperienceSection.vue');
+const SkillsSection = () => import('~/components/application/sections/skills/SkillsSection.vue');
+const FooterSection = () => import('~/components/application/sections/footer/FooterSection.vue');
 </script>
 
 <template>
-    <div>
+    <main>
         <Page>
             <HeroSection />
         </Page>
 
         <Content clipped>
-            <UseIntersectionObserver :component="AboutSection" />
+            <UseIntersectionObserver id="about-section" :component="AboutSection" />
+        </Content>
+
+        <Content>
+            <UseIntersectionObserver :component="SkillsSection" />
         </Content>
 
         <Content>
             <UseIntersectionObserver :component="ExperienceSection" />
         </Content>
-    </div>
+
+        <Content>
+            <UseIntersectionObserver :component="FooterSection" />
+        </Content>
+    </main>
 </template>

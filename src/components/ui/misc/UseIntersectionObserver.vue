@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { Component } from 'vue';
+import type { Component } from 'vue';
 
 const props = defineProps<{ component: () => Promise<Component> }>();
-
 
 let resolve: CallableFunction | null = null;
 const waitForIntersection = () => new Promise((r) => (resolve = r));
@@ -12,6 +11,7 @@ const waitForIntersection = () => new Promise((r) => (resolve = r));
  * will be placed
  */
 const target = ref(null);
+
 /**
  * The margin of pixels to the target element
  * Load before the component reachesthe screen
@@ -25,13 +25,17 @@ const { stop } = useIntersectionObserver(target, callback, { rootMargin });
 onBeforeUnmount(stop);
 
 const AsyncComponent = defineAsyncComponent(() =>
-    // wait for intersection
+    // If we are in SSR context
+    // just load a noop component
+
+    // Elsewhere, wait for intersection
     // and load the component
-    Promise
-        .resolve()
-        .then(waitForIntersection)
-        .then(stop)
-        .then(props.component)
+    import.meta.env.SSR
+        ? Promise
+            .resolve({ render: () => null } as Component)
+        : waitForIntersection()
+            .then(stop)
+            .then(props.component)
 );
 
 </script>

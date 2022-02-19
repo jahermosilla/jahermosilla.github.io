@@ -45,9 +45,9 @@ const hireMe() = () =>  ({
                 </li>
             </ul>
 
-            <JButton class="featured-word mt-4 bg-primary dark:bg-primary-dark">
+            <JButton component="a" primary cta class="featured-word mt-4">
                 See my experience
-                <MdiArrowRight class="ml-2" />
+                <MdiArrowRight class="ml-auto" />
             </JButton>
         </article>
     </JSection>

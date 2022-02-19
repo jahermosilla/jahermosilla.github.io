@@ -21,11 +21,12 @@ a:before {
 }
 
 a:before {
-    @apply bg-gray-500 dark:bg-gray-200
+    @apply bg-secondary dark:bg-secondary-dark
         transform rotate-8 scale-0;
 }
 
-a:hover:before {
+a:hover:before,
+a:focus:before {
     @apply rotate-0;
 }
 

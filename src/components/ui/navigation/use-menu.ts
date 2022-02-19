@@ -2,8 +2,8 @@ import { Ref, watchPostEffect } from "vue";
 
 const translate = ref(false);
 const navOpened = ref(false);
-const scroll = useScroll(window);
-const isMobile = useMediaQuery('(max-width: 768px)');
+const scroll = import.meta.env.SSR ? useScroll(null) : useScroll(window);
+const isMobile = import.meta.env.SSR ? ref(false) : useMediaQuery('(max-width: 768px)');
 const showBackdrop = computed(() => isMobile.value && navOpened.value);
 
 const toggle = () => navOpened.value = !navOpened.value;
@@ -34,7 +34,7 @@ export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
 
     // Hides the scrollbar when the nav is opened in mobile
     const unwatchNavOpened = watchEffect(() => {
-        document.body.style.overflowY = navOpened.value ? 'hidden' : 'auto';
+        if (!import.meta.env.SSR) document.body.style.overflowY = navOpened.value ? 'hidden' : 'auto';
     });
 
     // Focus on active link when nav is opened (mobile)

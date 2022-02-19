@@ -26,8 +26,8 @@
         gap-4
         bg-gradient-to-r
         from-primary
-        to-purple-500
-        dark:(from-primary-dark to-purple-400);
+        to-secondary
+        dark:(from-primary-dark to-secondary-dark);
 }
 
 .image-face {
