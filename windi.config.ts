@@ -1,6 +1,6 @@
 import { defineConfig } from 'windicss/helpers';
 import colors from 'windicss/colors';
-import typography from 'windicss/plugin/typography'
+import typography from 'windicss/plugin/typography';
 
 const primary = colors.blue;
 const secondary = colors.purple;
@@ -8,12 +8,9 @@ const secondary = colors.purple;
 export default defineConfig({
   darkMode: 'class',
 
-  // attributify: {
-  //   prefix: 'w:'
-  // },
-
   plugins: [
-    typography()
+    typography(),
+    require('@windicss/plugin-scrollbar'),
   ],
 
   shortcuts: {

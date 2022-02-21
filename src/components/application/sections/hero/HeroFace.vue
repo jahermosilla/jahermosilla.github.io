@@ -16,8 +16,6 @@
 
 <style scoped>
 .j-background {
-    aspect-ratio: 1;
-
     @apply p-4
         rounded-md
         grid
@@ -28,6 +26,40 @@
         from-primary
         to-secondary
         dark:(from-primary-dark to-secondary-dark);
+
+    /* force antialiasing */
+    will-change: transform;
+    transition: color 0.2s ease-in, clip-path 0.3s cubic-bezier(1, -0.1, 0, 2);
+    transition-delay: 0.1s;
+    aspect-ratio: 1;
+
+    clip-path: polygon(
+        50% 0%,
+        83% 12%,
+        100% 43%,
+        94% 78%,
+        68% 100%,
+        32% 100%,
+        6% 78%,
+        0% 43%,
+        17% 12%
+    );
+}
+
+.j-background:hover {
+    transition-delay: 0s;
+
+    clip-path: polygon(
+        50% 0%,
+        100% 0,
+        100% 43%,
+        100% 100%,
+        68% 100%,
+        32% 100%,
+        0 100%,
+        0% 43%,
+        0 0
+    );
 }
 
 .image-face {

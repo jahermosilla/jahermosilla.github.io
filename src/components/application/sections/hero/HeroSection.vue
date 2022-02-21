@@ -1,7 +1,7 @@
 <template>
     <JSection class="relative grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="flex items-center justify-center w-auto">
-            <HeroFace class="nonagon clipped overflow-hidden" />
+            <HeroFace class="nonagon" />
         </div>
         <div
             class="min-h-auto lg:ml-16 my-10 xl:my-0 xl:min-h-[var(--content-height)] box-border flex flex-col justify-end md:justify-center gap-1"
@@ -33,41 +33,7 @@
 .nonagon {
     width: min(100%, 700px);
 
-    @apply mx-8 md:mx-24 lg:(ml-0 mr-24);
-}
-
-.clipped {
-    /* force antialiasing */
-    will-change: transform;
-    transition: color 0.2s ease-in, clip-path 0.3s cubic-bezier(1, -0.1, 0, 2);
-    transition-delay: 0.1s;
-
-    clip-path: polygon(
-        50% 0%,
-        83% 12%,
-        100% 43%,
-        94% 78%,
-        68% 100%,
-        32% 100%,
-        6% 78%,
-        0% 43%,
-        17% 12%
-    );
-}
-
-.clipped:hover {
-    transition-delay: 0s;
-
-    clip-path: polygon(
-        50% 0%,
-        100% 0,
-        100% 43%,
-        100% 100%,
-        68% 100%,
-        32% 100%,
-        0 100%,
-        0% 43%,
-        0 0
-    );
+    @apply overflow-hidden
+    md:mx-24 lg:(ml-0 mr-12) xl:(ml-0 mr-24);
 }
 </style>

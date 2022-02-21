@@ -50,10 +50,11 @@ import VscodeIconsFileTypeAws from '~icons/vscode-icons/file-type-aws';
 import LogosLinuxTux from '~icons/logos/linux-tux';
 import LogosMicrosoftWindows from '~icons/logos/microsoft-windows';
 import VscodeIconsFileTypeVscode from '~icons/vscode-icons/file-type-vscode';
+import DeveloperCodingIlustration from './DeveloperCodingIlustration.vue';
 
 
 const technologyIcons: Ref<SVGElement[]> = ref([]);
-const setTechnologyIconRef = (el: SVGElement) => { if (el) technologyIcons.value?.push(el); }
+const setTechnologyIconRef = (el: SVGElement) => { if (el) technologyIcons.value.push(el); }
 
 const frontendIcons = [
     VscodeIconsFileTypeHtml,
@@ -114,7 +115,8 @@ onMounted(() => {
                 y: 100,
                 opacity: 0,
             },
-            visible: {
+            enter: {
+                x: 0,
                 y: 0,
                 opacity: 1,
                 scale: 1,
@@ -130,9 +132,11 @@ onMounted(() => {
             },
 
             levitate: {
-                y: 15,
+                x: index > (frontendIcons.length / 2) ? -200 : 200,
+                y: index > (frontendIcons.length / 2) ? -200 : 200,
                 transition: {
-                    duration: 1500,
+                    delay: index * 20,
+                    duration: 3000,
                     repeat: Infinity,
                     ease: 'easeInOut',
                     repeatType: 'mirror',
@@ -146,15 +150,17 @@ onMounted(() => {
 </script>
 
 <template>
-    <JSection title="Skills">
+    <JSection title="Skills" class="relative">
         <!-- <div class="flex">
             <MdiMonitor class="!text-xl" />
             <MdiCellphone class="!text-xl" />
         </div>-->
 
-        <div class="grid grid-cols-6 gap-4 place-items-center w-[max-content]">
+        <div class="grid grid-cols-6 gap-4 place-items-center">
             <Component v-for="icon in frontendIcons" :is="icon" :ref="setTechnologyIconRef" />
         </div>
+
+        <DeveloperCodingIlustration class="absolute top-0 left-[50%] transform -translate-x-[50%]" />
     </JSection>
 </template>
 

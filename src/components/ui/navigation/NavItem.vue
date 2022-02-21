@@ -4,7 +4,7 @@ const props = defineProps<{ to: string, text: string }>();
 
 <template>
     <li>
-        <RouterLink :to="props.to">{{ props.text }}</RouterLink>
+        <RouterLink :to="props.to" class="nav-item">{{ props.text }}</RouterLink>
     </li>
 </template>
 

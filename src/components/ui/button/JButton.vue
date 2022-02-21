@@ -35,13 +35,26 @@ const { icon } = toRefs(props);
 }
 
 .j-button.primary {
-    @apply !text-light-100
-    bg-primary hover:bg-secondary
-    dark:(bg-primary-dark hover:bg-secondary-dark);
+    @apply relative
+    !text-light-100
+    bg-primary hover:bg-transparent
+    dark:(bg-primary-dark hover:bg-transparent);
+}
+
+.j-button.primary:before {
+    @apply -z-1 absolute content-[''] inset-0;
+}
+
+.j-button.primary:before,
+.j-button.primary:after {
+    @apply rounded-sm
+        bg-gradient-to-r
+        from-primary to-secondary
+        dark:(from-primary-dark to-secondary-dark);
 }
 
 .j-button.cta {
-    @apply min-w-[200px];
+    @apply min-w-[200px] font-bold;
 }
 
 .j-button.icon {

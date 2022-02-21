@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Ref } from 'vue';
 import { useNavigationMenuActions } from '~/components/ui/navigation/use-menu';
 
 const items = [{
@@ -35,7 +34,7 @@ const { toggle, showBackdrop } = useNavigationMenuActions();
     </ClientOnly>
 
     <RouterView v-slot="{ Component: component, route }">
-      <Transition name="translate-right">
+      <Transition name="translate-right" mode="out-in">
         <Component :is="component" :key="route.path" />
       </Transition>
     </RouterView>
@@ -55,17 +54,18 @@ const { toggle, showBackdrop } = useNavigationMenuActions();
 .translate-right-enter-active,
 .translate-right-leave-active {
   @apply transform;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-duration: 0.3s;
+  transform-origin: center;
 }
 
 .translate-right-enter-from,
 .translate-right-leave-to {
-  @apply -translate-x-[100%];
+  @apply scale-0;
 }
 
 .translate-right-leave-from,
 .translate-right-enter-to {
-  @apply translate-x-0;
+  @apply scale-100;
 }
 </style>
