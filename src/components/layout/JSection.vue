@@ -12,7 +12,7 @@ const props = defineProps<{ title?: string }>();
     <section>
         <h1
             v-if="!!props.title"
-            class="text-2xl font-bold mb-6 text-primary dark:text-primary-dark"
+            class="text-2xl font-bold uppercase mb-6 text-primary dark:text-primary-dark"
         >{{ props.title }}</h1>
 
         <div v-bind="$attrs">

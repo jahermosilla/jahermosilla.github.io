@@ -11,7 +11,7 @@ body {
   @apply bg-gray-100 text-gray-700
     dark:(bg-gray-800 text-gray-100);
 
-  font-family: Poppins, system-ui !important;
+  font-family: Nunito, system-ui !important;
 }
 
 a,

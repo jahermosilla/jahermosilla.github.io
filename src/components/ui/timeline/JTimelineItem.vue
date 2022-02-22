@@ -21,8 +21,7 @@
     bg-primary
     shadow-gray-100 dark:shadow-gray-800
     flex items-center justify-center
-    absolute top-[50%] left-0
-    transform -translate-y-[50%];
+    absolute top-5 left-0;
 }
 
 .timeline-item:before {

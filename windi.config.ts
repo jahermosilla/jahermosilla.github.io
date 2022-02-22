@@ -17,6 +17,12 @@ export default defineConfig({
     'page-padding': 'px-8 md:px-16 lg:px-24 xl:px-48 2xl:px-60'
   },
 
+  variants: {
+    scrollbar: [
+      'rounded'
+    ]
+  },
+
   theme: {
     extend: {
       colors: {

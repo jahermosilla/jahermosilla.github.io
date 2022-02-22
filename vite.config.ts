@@ -10,6 +10,8 @@ import autoImportComponents from 'unplugin-vue-components/vite';
 import windiCSS from 'vite-plugin-windicss';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
+import { ViteWebfontDownload as googleFonts } from 'vite-plugin-webfont-dl';
+
 
 import { Options as AutoImportOptions } from 'unplugin-auto-import/dist/types';
 import { Options as AutoImportComponentsOptions } from 'unplugin-vue-components/dist/types';
@@ -63,6 +65,11 @@ export default defineConfig({
     autoImport(autoImportOptions),
     autoImportComponents(autoImportComponentsOptions),
     windiCSS(),
+    googleFonts([
+      // 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap'
+      // 'https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap'
+      'https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;600;700;800&display=swap'
+    ]),
     icons({ autoInstall: true, compiler: 'vue3' })
   ],
 

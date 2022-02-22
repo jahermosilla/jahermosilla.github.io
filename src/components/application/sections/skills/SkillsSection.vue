@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useMotion } from '@vueuse/motion';
-import { Ref } from 'vue';
 import VscodeIconsFileTypeHtml from '~icons/vscode-icons/file-type-html';
 import VscodeIconsFileTypeCss from '~icons/vscode-icons/file-type-css';
 import VscodeIconsFileTypeTypescriptOfficial from '~icons/vscode-icons/file-type-typescript-official';
@@ -53,10 +51,7 @@ import VscodeIconsFileTypeVscode from '~icons/vscode-icons/file-type-vscode';
 import DeveloperCodingIlustration from './DeveloperCodingIlustration.vue';
 
 
-const technologyIcons: Ref<SVGElement[]> = ref([]);
-const setTechnologyIconRef = (el: SVGElement) => { if (el) technologyIcons.value.push(el); }
-
-const frontendIcons = [
+const firstRingIcons = [
     VscodeIconsFileTypeHtml,
     VscodeIconsFileTypeCss,
     VscodeIconsFileTypeTypescriptOfficial,
@@ -81,6 +76,9 @@ const frontendIcons = [
     LogosOpenlayers,
     LogosMapboxIcon,
     LogosVuetifyjs,
+]
+
+const secondRingIcons = [
     VscodeIconsFileTypeJar,
     VscodeIconsFileTypeNode,
     VscodeIconsFileTypePython,
@@ -106,66 +104,16 @@ const frontendIcons = [
     LogosMicrosoftWindows,
     VscodeIconsFileTypeVscode,
 ];
-
-onMounted(() => {
-    technologyIcons.value?.forEach((reference, index) => {
-        const { variant } = useMotion(reference, {
-            initial: {
-                scale: 0,
-                y: 100,
-                opacity: 0,
-            },
-            enter: {
-                x: 0,
-                y: 0,
-                opacity: 1,
-                scale: 1,
-                transition: {
-                    type: 'spring',
-                    stiffness: 320,
-                    damping: 20,
-                    delay: index * 50,
-                    onComplete() {
-                        variant.value = 'levitate';
-                    }
-                },
-            },
-
-            levitate: {
-                x: index > (frontendIcons.length / 2) ? -200 : 200,
-                y: index > (frontendIcons.length / 2) ? -200 : 200,
-                transition: {
-                    delay: index * 20,
-                    duration: 3000,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    repeatType: 'mirror',
-                },
-
-            }
-        });
-    });
-});
-
 </script>
 
 <template>
-    <JSection title="Skills" class="relative">
-        <!-- <div class="flex">
-            <MdiMonitor class="!text-xl" />
-            <MdiCellphone class="!text-xl" />
-        </div>-->
+    <JSection title="Skills" class="relative min-h-screen">
+        <RotatorRing :items="firstRingIcons" />
 
-        <div class="grid grid-cols-6 gap-4 place-items-center">
-            <Component v-for="icon in frontendIcons" :is="icon" :ref="setTechnologyIconRef" />
-        </div>
+        <RotatorRing :items="secondRingIcons" small />
 
-        <DeveloperCodingIlustration class="absolute top-0 left-[50%] transform -translate-x-[50%]" />
+        <DeveloperCodingIlustration
+            class="absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] max-w-full"
+        />
     </JSection>
 </template>
-
-<style scoped>
-svg {
-    @apply text-4xl text-primary;
-}
-</style>

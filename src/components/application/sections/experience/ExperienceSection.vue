@@ -25,8 +25,8 @@ const computeIcon = (experienceType: string) => experienceType === 'education'
                     <h1 class="font-bold">{{ experience.title }}</h1>
                     <h1 class="text-sm text-primary dark:text-primary-dark">{{ experience.place }}</h1>
 
-                    <ResizableContainer :height="80" class="my-1">
-                        <Component :is="experience.description" />
+                    <ResizableContainer :height="76" class="my-1">
+                        <Component :is="experience.description" class="text-gray-500" />
                     </ResizableContainer>
 
                     <p class="text-sm">{{ experience.duration[0] }} - {{ experience.duration[1] }}</p>

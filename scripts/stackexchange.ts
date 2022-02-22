@@ -76,11 +76,16 @@ async function getStackExchangeResourceData<T>(resource: StackOverflowUserResour
     const filter = filters[resource];
     const params = new URLSearchParams({ ...defaultParams, filter, site });
 
-    const data = await fetch(`${url}?${params}`)
-        .then(response => response.json());
-    //.then((stackoverflowResponse: StackOverflowResponse<T>) => stackoverflowResponse.items);
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json; charset=utf-8')
 
-    console.log({ data });
+    console.log('Fetching...', `${url}?${params}`);
+
+    const data = await fetch(`${url}?${params}`, { headers })
+        .then(response => response.json())
+        .then((stackoverflowResponse: StackOverflowResponse<T>) => stackoverflowResponse.items);
+
+    // console.log({ data });
 
     return data;
 }

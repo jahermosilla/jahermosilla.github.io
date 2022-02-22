@@ -46,7 +46,7 @@ const hireMe() = () =>  ({
             </ul>
 
             <JButton component="a" primary cta class="featured-word mt-4">
-                See my experience
+                <div class="mr-4">See my experience</div>
                 <MdiArrowRight class="ml-auto" />
             </JButton>
         </article>
