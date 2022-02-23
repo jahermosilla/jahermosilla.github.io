@@ -1,6 +1,3 @@
-<JPage>
-</JPage>
-
 # Hello world
 ---
 

@@ -29,6 +29,7 @@ declare module 'vue' {
     Master: typeof import('./components/application/sections/experience/descriptions/Master.vue')['default']
     MdiArrowDown: typeof import('~icons/mdi/arrow-down')['default']
     MdiArrowRight: typeof import('~icons/mdi/arrow-right')['default']
+    MdiHeart: typeof import('~icons/mdi/heart')['default']
     MdiWeatherNight: typeof import('~icons/mdi/weather-night')['default']
     MdiWhiteBalanceSunny: typeof import('~icons/mdi/white-balance-sunny')['default']
     Navigation: typeof import('./components/ui/navigation/Navigation.vue')['default']

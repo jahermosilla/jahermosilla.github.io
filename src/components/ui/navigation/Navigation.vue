@@ -22,7 +22,7 @@
 
     @apply fixed
         top-0 bottom-0 h-screen
-        bg-gray-100 dark:bg-gray-800
+        bg-light-100 dark:bg-dark-700
         mx-0
         p-10
         right-0

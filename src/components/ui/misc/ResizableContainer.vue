@@ -32,10 +32,11 @@ onMounted(setContentHeight);
                 @click="toggle"
                 v-if="showArrow"
                 icon
-                class="z-1 absolute bottom-4 left-[50%] -translate-x-[50%]"
+                aria-label="Toggle expanded content"
+                class="z-1 absolute -bottom-4 left-[50%] -translate-x-[50%]"
             >
                 <MdiArrowDown
-                    class="text-base transition-all transform duration-200 ease-in-out"
+                    class="text-base transition-all transform duration-200 ease-in-out text-secondary-dark text-2xl"
                     :class="{ 'rotate-180': opened }"
                 ></MdiArrowDown>
             </JButton>

@@ -92,7 +92,7 @@ const secondRingIcons = [
     LogosRabbitmqIcon,
     VscodeIconsFileTypeMakefile,
     VscodeIconsFileTypeNginx,
-    VscodeIconsFileTypeMatlab,
+    // VscodeIconsFileTypeMatlab,
     VscodeIconsFileTypeGit,
     LogosGithubOctocat,
     MdiGithub,
@@ -110,7 +110,7 @@ const secondRingIcons = [
     <JSection title="Skills" class="relative min-h-screen">
         <RotatorRing :items="firstRingIcons" />
 
-        <RotatorRing :items="secondRingIcons" small />
+        <RotatorRing :items="secondRingIcons" small :delay="500" />
 
         <DeveloperCodingIlustration
             class="absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] max-w-full"

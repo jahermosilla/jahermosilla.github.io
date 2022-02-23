@@ -9,14 +9,20 @@
             <h1 class="text-6xl font-bold uppercase">Jose Hermosilla Rodrigo</h1>
 
             <ol
-                class="mt-4 text-xl font-bold bg-gradient-to-l from-primary to-secondary dark:(from-primary-dark to-secondary-dark) bg-clip-text text-transparent"
+                class="mt-4 text-xl font-bold bg-gradient-to-r from-primary to-secondary dark:(from-primary-dark to-secondary-dark) bg-clip-text text-transparent"
             >
                 <li>Software crafter</li>
                 <li>Geomatics Engineer (GIS & Cartography)</li>
                 <li>Just another human being</li>
             </ol>
 
-            <JButton component="a" href="/#/#about-section" primary cta class="featured-word mt-4">
+            <JButton
+                component="a"
+                href="/#/#about-section"
+                primary
+                cta
+                class="featured-word mt-12 text-xl"
+            >
                 <div class="mr-4">Want to know more?</div>
                 <MdiArrowDown class="ml-auto" />
             </JButton>
@@ -30,6 +36,6 @@
     width: min(100%, 700px);
 
     @apply overflow-hidden
-    mx-16 md:(ml-0 mr-4) lg:(ml-0 mr-12) xl:(ml-0 mr-24);
+    mx-2 md:(ml-0 mr-4) lg:(ml-0 mr-12) xl:(ml-0 mr-24);
 }
 </style>

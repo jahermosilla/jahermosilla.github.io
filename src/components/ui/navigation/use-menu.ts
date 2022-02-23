@@ -34,8 +34,6 @@ export default function useNavigationMenu(headerRef: Ref<HTMLElement | null>) {
 
     // Hides the scrollbar when the nav is opened in mobile
     const unwatchNavOpened = watchEffect(() => {
-
-        console.log('Set nav opened', navOpened.value ? 'hidden !important' : 'auto', document.querySelector(':root'))
         if (!import.meta.env.SSR) document.querySelector('html')!.style.overflowY = navOpened.value ? 'hidden' : 'auto';
     });
 

@@ -14,12 +14,12 @@ const { clipped } = toRefs(props);
 
 <style scoped>
 .j-content {
-    @apply min-w-full page-padding py-16 min-h-screen;
+    @apply min-w-full page-padding py-12 relative;
 }
 
 .clipped {
-    @apply py-32 bg-primary/10 dark:(bg-primary-dark/10);
+    /* @apply bg-primary/10; */
 
-    clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
+    /* clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%); */
 }
 </style>

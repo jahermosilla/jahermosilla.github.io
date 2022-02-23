@@ -56,6 +56,7 @@ const shadowClass = computed(() => isTopReached.value ? 'shadow-none' : 'shadow-
 
         <Transition name="translate-left" mode="out-in">
             <Hamburguer
+                aria-label="Toggle Navigation visibility"
                 v-if="isMobile"
                 @click="toggle"
                 :opened="navOpened"
@@ -74,7 +75,7 @@ header {
         fixed
         top-0
         z-20
-        bg-gray-100/80 dark:bg-gray-800/80
+        bg-light-100/80 dark:bg-dark-600/80
         backdrop-filter backdrop-blur-md
         flex items-center
         w-full

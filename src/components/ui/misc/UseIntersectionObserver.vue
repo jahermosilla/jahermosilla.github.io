@@ -41,11 +41,10 @@ const AsyncComponent = defineAsyncComponent(() =>
 </script>
 
 <template>
-    <div ref="target">
-        <Suspense>
-            <AsyncComponent />
+    <div ref="target"></div>
+    <Suspense>
+        <AsyncComponent />
 
-            <!-- TODO: Loading component -->
-        </Suspense>
-    </div>
+        <!-- TODO: Loading component -->
+    </Suspense>
 </template>

@@ -27,12 +27,16 @@ export default defineConfig({
     extend: {
       colors: {
         primary: {
-          DEFAULT: primary['500'],
-          dark: primary['400']
+          DEFAULT: '#3949ab',
+          light: '#8e99f3',
+          dark: '#6ec6ff',
+          darker: '#00227b'
         },
         secondary: {
-          DEFAULT: secondary['500'],
-          dark: secondary['400']
+          DEFAULT: '#8e24aa',
+          light: '#c158dc',
+          dark: '#c158dc',
+          darker: '#5c007a'
         },
 
       }

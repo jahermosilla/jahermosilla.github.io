@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+    inheritAttrs: false
+}
+</script>
+
 <script setup lang="ts">
 interface JButtonProps {
     icon?: boolean,
@@ -21,7 +27,12 @@ const { icon } = toRefs(props);
 </script>
 
 <template>
-    <Component :is="props.component" class="j-button" :class="{ icon, primary, cta }">
+    <Component
+        v-bind="$attrs"
+        :is="props.component"
+        class="j-button"
+        :class="{ icon, primary, cta }"
+    >
         <slot />
     </Component>
 </template>

@@ -8,8 +8,8 @@ html {
 }
 
 body {
-  @apply bg-gray-100 text-gray-700
-    dark:(bg-gray-800 text-gray-100);
+  @apply bg-light-50 text-dark-700
+    dark:(bg-dark-600 text-light-50);
 
   font-family: Nunito, system-ui !important;
 }
@@ -19,6 +19,7 @@ a,
   @apply relative;
 }
 
+/* 
 a:after,
 .featured-word:after {
   @apply content-[''] absolute -bottom-2 left-0 w-full h-1
@@ -39,5 +40,5 @@ a:not(.router-link-active):focus,
 a:not(.nav-item),
 .featured-word {
   @apply text-primary dark:text-primary-dark;
-}
+} */
 </style>

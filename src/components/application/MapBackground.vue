@@ -18,8 +18,6 @@ onMounted(() => {
         zoom: 17,
     }
 
-    console.log(target.value)
-
     const mapOptions: MapOptions = {
         layers,
         view: new ViewOpenlayers(viewOptions),

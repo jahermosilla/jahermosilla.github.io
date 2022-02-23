@@ -19,7 +19,9 @@
     @apply rounded-full
     h-8 w-8
     bg-primary
-    shadow-gray-100 dark:shadow-gray-800
+    dark:bg-primary-dark
+    shadow-light-100 dark:shadow-dark-700
+    text-light-100 dark:text-dark-700
     flex items-center justify-center
     absolute top-5 left-0;
 }

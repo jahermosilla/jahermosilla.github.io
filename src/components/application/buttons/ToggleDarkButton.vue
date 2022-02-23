@@ -4,7 +4,7 @@ const toggleDark = useToggle(isDark);
 </script>
 
 <template>
-    <JButton icon @click="() => toggleDark()">
+    <JButton icon @click="() => toggleDark()" aria-label="Toggle Dark Button">
         <Transition name="scale" mode="out-in">
             <MdiWeatherNight v-if="isDark" class="icon text-primary-dark" />
             <MdiWhiteBalanceSunny v-else class="icon text-primary" />

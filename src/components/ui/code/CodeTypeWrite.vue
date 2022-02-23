@@ -50,7 +50,7 @@ onBeforeUnmount(cancel);
 </script>
 
 <template>
-    <div class="rounded-md bg-gray-50 dark:bg-gray-700 overflow-hidden">
+    <div class="rounded-md bg-gray-100 dark:bg-gray-700 overflow-hidden">
         <div class="flex space-x-1 p-2 bg-gray-300 dark:bg-gray-500">
             <div class="bg-gray-600 dark:bg-gray-200 w-3 h-3 rounded-full"></div>
             <div class="bg-gray-600 dark:bg-gray-200 w-3 h-3 rounded-full"></div>

@@ -85,7 +85,5 @@ async function getStackExchangeResourceData<T>(resource: StackOverflowUserResour
         .then(response => response.json())
         .then((stackoverflowResponse: StackOverflowResponse<T>) => stackoverflowResponse.items);
 
-    // console.log({ data });
-
     return data;
 }

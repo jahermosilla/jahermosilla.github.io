@@ -76,7 +76,8 @@
     @apply flex justify-center items-center
         bg-cover
         rounded-md
-        bg-gray-100 dark:bg-gray-800;
+        bg-light-50 dark:bg-dark-600
+        00;
 }
 
 .j-square--left,

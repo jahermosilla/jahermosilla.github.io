@@ -51,7 +51,10 @@ onBeforeUnmount(() => { listeners.forEach(listener => listener()); });
         style="scroll-behavior: smooth;"
         class="overflow-x-auto overflow-y-hidden max-w-full overflow scrollbar-thin mb-1"
     >
-        <div ref="container" class="relative min-w-full w-[fit-content] flex justify-center">
+        <div
+            ref="container"
+            class="relative min-w-full w-[fit-content] flex justify-center border-b-[rgba(0,0,0,0.1)] border-b-1"
+        >
             <JButton
                 v-for="item in props.items"
                 @click="_selected = item.title"
@@ -76,8 +79,8 @@ onBeforeUnmount(() => { listeners.forEach(listener => listener()); });
         justify-center
         uppercase
         text-base
-        font-semibold
-        text-gray-500
+        font-normal
+        text-gray-700
         rounded-t-sm
         dark:(text-gray-300);
 }
@@ -99,6 +102,6 @@ onBeforeUnmount(() => { listeners.forEach(listener => listener()); });
 }
 
 .active {
-    @apply text-primary dark:text-primary-dark;
+    @apply font-semibold text-primary dark:text-primary-dark;
 }
 </style>
