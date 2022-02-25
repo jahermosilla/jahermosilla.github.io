@@ -1,9 +1,5 @@
 import { defineConfig } from 'windicss/helpers';
-import colors from 'windicss/colors';
 import typography from 'windicss/plugin/typography';
-
-const primary = colors.blue;
-const secondary = colors.purple;
 
 export default defineConfig({
   darkMode: 'class',
@@ -14,7 +10,9 @@ export default defineConfig({
   ],
 
   shortcuts: {
-    'page-padding': 'px-8 md:px-16 lg:px-24 xl:px-48 2xl:px-60'
+    'page-padding': 'px-8 md:px-16 lg:px-24 xl:px-48 2xl:px-60',
+    'app-background': 'bg-light-100 dark:bg-primary-darker',
+    'app-header-background': 'bg-light-100/80 dark:bg-primary-darker/80'
   },
 
   variants: {
@@ -29,15 +27,15 @@ export default defineConfig({
         primary: {
           DEFAULT: '#3949ab',
           light: '#8e99f3',
-          dark: '#6ec6ff',
-          darker: '#00227b'
+          dark: '#5e92f3',
+          darker: '#171417'
         },
-        secondary: {
-          DEFAULT: '#8e24aa',
-          light: '#c158dc',
-          dark: '#c158dc',
-          darker: '#5c007a'
-        },
+        // secondary: {
+        //   DEFAULT: '#8e24aa',
+        //   light: '#c158dc',
+        //   dark: '#c158dc',
+        //   darker: '#171417'
+        // },
 
       }
     }

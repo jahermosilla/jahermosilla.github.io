@@ -114,7 +114,7 @@ const { roll, tilt } = useParallax(target);
         />
         <polygon
             points="878.63 449.724 0 449.724 0 476.724 51.97 476.724 51.97 483 826.68 483 826.68 476.724 878.63 476.724 878.63 449.724"
-            class="fill-secondary dark:fill-secondary-dark"
+            class="fill-primary dark:fill-primary-light"
         />
         <path
             d="M537.55552,334.04923h0c-11.3546,0-20.55934-9.95244-20.55934-22.22945h0V300.705c0-12.277,9.20473-22.22945,20.55933-22.22945h0v55.57369Z"

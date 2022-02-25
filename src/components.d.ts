@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AboutDescription: typeof import('./components/application/sections/about/AboutDescription.vue')['default']
     AboutSection: typeof import('./components/application/sections/about/AboutSection.vue')['default']
     Backdrop: typeof import('./components/ui/navigation/Backdrop.vue')['default']
     CodeTypeWrite: typeof import('./components/ui/code/CodeTypeWrite.vue')['default']
@@ -13,6 +14,7 @@ declare module 'vue' {
     DeveloperCodingIlustration: typeof import('./components/application/sections/skills/DeveloperCodingIlustration.vue')['default']
     ExperienceSection: typeof import('./components/application/sections/experience/ExperienceSection.vue')['default']
     FaceImage: typeof import('./components/application/sections/hero/FaceImage.vue')['default']
+    FeaturedText: typeof import('./components/ui/text/FeaturedText.vue')['default']
     FooterSection: typeof import('./components/application/sections/footer/FooterSection.vue')['default']
     GreenUrbanData: typeof import('./components/application/sections/experience/descriptions/GreenUrbanData.vue')['default']
     Hamburguer: typeof import('./components/ui/button/Hamburguer.vue')['default']

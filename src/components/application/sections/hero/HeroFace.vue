@@ -23,9 +23,7 @@
         grid-rows-4
         gap-4
         bg-gradient-to-r
-        from-primary
-        to-secondary
-        dark:(from-primary-dark to-secondary-dark);
+        bg-primary dark:bg-primary-dark;
 
     /* force antialiasing */
     will-change: transform;
@@ -76,7 +74,7 @@
     @apply flex justify-center items-center
         bg-cover
         rounded-md
-        bg-light-50 dark:bg-dark-600
+        app-background
         00;
 }
 

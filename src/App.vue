@@ -8,8 +8,7 @@ html {
 }
 
 body {
-  @apply bg-light-50 text-dark-700
-    dark:(bg-dark-600 text-light-50);
+  @apply app-background text-dark-700 dark:text-light-50;
 
   font-family: Nunito, system-ui !important;
 }

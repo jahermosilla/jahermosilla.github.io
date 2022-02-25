@@ -72,6 +72,7 @@ export default defineConfig({
     ]),
     icons({ autoInstall: true, compiler: 'vue3' })
   ],
+  //.concat(process.env.NODE_ENV === 'development' ? [] : []),
 
   ssgOptions: {
     script: 'async',

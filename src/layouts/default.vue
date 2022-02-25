@@ -21,7 +21,7 @@ const { toggle, showBackdrop } = useNavigationMenuActions();
   <Container class="j-container">
     <Header height="var(--header-height)" :items="items">
       <template #prepend>
-        <p class="font-bold text-2xl">JHR</p>
+        <p class="font-bold text-2xl text-primary dark:text-primary-dark">JHR</p>
       </template>
 
       <template #append>
@@ -34,9 +34,9 @@ const { toggle, showBackdrop } = useNavigationMenuActions();
     </ClientOnly>
 
     <RouterView v-slot="{ Component: component, route }">
-      <Transition name="translate-right" mode="out-in">
-        <Component :is="component" :key="route.path" />
-      </Transition>
+      <Component :is="component" :key="route.path" />
+      <!-- <Transition name="translate-right" mode="out-in">
+      </Transition>-->
     </RouterView>
   </Container>
 </template>

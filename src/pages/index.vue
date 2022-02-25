@@ -22,12 +22,12 @@ const StackExchangeSection = () => import('~/components/application/sections/sta
             <UseIntersectionObserver :component="ExperienceSection" />
         </Content>
 
-        <Content clipped>
-            <UseIntersectionObserver :component="StackExchangeSection" />
-        </Content>
-
         <Content>
             <UseIntersectionObserver :component="SkillsSection" />
+        </Content>
+
+        <Content clipped>
+            <UseIntersectionObserver :component="StackExchangeSection" />
         </Content>
 
         <Content>

@@ -21,6 +21,7 @@ const rootMargin = '50px';
 const callback: IntersectionObserverCallback = ([{ isIntersecting }]) => isIntersecting && resolve!();
 
 const { stop } = useIntersectionObserver(target, callback, { rootMargin });
+const loaded = ref(false);
 
 onBeforeUnmount(stop);
 
@@ -35,13 +36,14 @@ const AsyncComponent = defineAsyncComponent(() =>
             .resolve({ render: () => null } as Component)
         : waitForIntersection()
             .then(stop)
+            .then(() => loaded.value = true)
             .then(props.component)
 );
 
 </script>
 
 <template>
-    <div ref="target"></div>
+    <div ref="target" :class="{ 'min-h-screen': !loaded }"></div>
     <Suspense>
         <AsyncComponent />
 

@@ -1,53 +1,53 @@
 
 <script setup lang="ts">
-import { Ref } from 'vue';
+import { Ref, watchPostEffect } from 'vue';
+import useResizable from './use-resizable';
 
-const props = defineProps<{ height: number }>();
-
-const opened = ref(false);
-const toggle = () => opened.value = !opened.value;
-const contentHeight = ref(0);
-const computedHeight = computed(() => `${opened.value ? contentHeight.value : props.height}px`);
-const showArrow = computed(() => props.height < contentHeight.value);
-
+const props = withDefaults(defineProps<{ height: number, baseline?: boolean, headerClass?: string }>(), {
+    baseline: false,
+    headerClass: ''
+});
 const containerElement: Ref<HTMLDivElement | null> = ref(null);
 
-const setContentHeight = async () => {
-    await nextTick();
-    contentHeight.value = containerElement.value?.scrollHeight || 0
-};
+const alignmentClass = computed(() => props.baseline ? 'items-baseline' : 'items-center');
 
-useEventListener('resize', () => setContentHeight())
-onMounted(setContentHeight);
+const { height, showArrow, toggle, opened } = useResizable(containerElement, props.height);
 </script>
 
 <template>
-    <div class="j-resizable-container">
-        <div ref="containerElement" class="relative">
-            <slot />
-        </div>
+    <div>
+        <header class="flex px-1" :class="[alignmentClass, props.headerClass]">
+            <div>
+                <slot name="title"></slot>
+            </div>
+            <slot name="action" v-bind="{ toggle, showArrow }">
+                <JButton
+                    @click="toggle"
+                    v-if="showArrow"
+                    icon
+                    aria-label="Toggle expanded content"
+                    class="ml-auto w-[fit-content]"
+                >
+                    <MdiArrowDown
+                        class="text-base transition-all transform duration-200 ease-in-out text-dark-50 dark:text-light-800 text-xl"
+                        :class="{ 'rotate-180': opened }"
+                    ></MdiArrowDown>
+                </JButton>
+            </slot>
+        </header>
 
-        <slot name="action">
-            <JButton
-                @click="toggle"
-                v-if="showArrow"
-                icon
-                aria-label="Toggle expanded content"
-                class="z-1 absolute -bottom-4 left-[50%] -translate-x-[50%]"
-            >
-                <MdiArrowDown
-                    class="text-base transition-all transform duration-200 ease-in-out text-secondary-dark text-2xl"
-                    :class="{ 'rotate-180': opened }"
-                ></MdiArrowDown>
-            </JButton>
-        </slot>
+        <div class="j-resizable-container">
+            <div ref="containerElement" class="relative">
+                <slot />
+            </div>
+        </div>
     </div>
 </template>
 
 <style scoped>
 .j-resizable-container {
     max-height: fit-content;
-    height: v-bind(computedHeight);
-    @apply overflow-hidden transition-all;
+    height: v-bind(height);
+    @apply overflow-hidden transition-all px-1;
 }
 </style>

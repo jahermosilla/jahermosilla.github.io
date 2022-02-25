@@ -75,7 +75,7 @@ header {
         fixed
         top-0
         z-20
-        bg-light-100/80 dark:bg-dark-600/80
+        app-header-background
         backdrop-filter backdrop-blur-md
         flex items-center
         w-full

@@ -10,11 +10,7 @@ const computeIcon = (experienceType: string) => experienceType === 'education'
 </script>
 
 <template>
-    <JSection title="Experience">
-        <p
-            class="mb-2"
-        >I have kinda scientific background and profesional experience developing web applications:</p>
-
+    <JSection title="Studies & Experience">
         <JTimeline>
             <JTimelineItem v-for="experience in experiences">
                 <template #icon>
@@ -22,30 +18,34 @@ const computeIcon = (experienceType: string) => experienceType === 'education'
                 </template>
 
                 <JCard>
-                    <h1 class="font-bold">{{ experience.title }}</h1>
-                    <h2
-                        class="text-sm font-bold text-primary dark:text-primary-dark"
-                    >{{ experience.place }}</h2>
+                    <ResizableContainer :height="98" class="my-1">
+                        <template #title>
+                            <p
+                                class="text-sm uppercase"
+                            >{{ experience.duration[0] }} - {{ experience.duration[1] }}</p>
 
-                    <ResizableContainer :height="76" class="my-1">
+                            <h1 class="font-bold text-xl">{{ experience.title }}</h1>
+                            <h2
+                                class="text-lg font-bold text-primary dark:text-primary-dark"
+                            >{{ experience.place }}</h2>
+                        </template>
+
                         <Component
                             :is="experience.description"
-                            class="text-gray-500 dark:text-light-900"
+                            class="text-gray-500 dark:text-light-900 mt-2"
                         />
                     </ResizableContainer>
-
-                    <p class="text-sm">{{ experience.duration[0] }} - {{ experience.duration[1] }}</p>
                 </JCard>
             </JTimelineItem>
         </JTimeline>
 
-        <p class="mt-6 mb-2">I have also made a lot of courses</p>
+        <p class="mt-6 mb-2 text-xl">I have also made a lot of courses</p>
 
         <!-- <FeaturedCourses /> -->
-
+        <!-- 
         <JButton component="a" primary cta>
             See the full list
             <MdiArrowRight class="ml-auto" />
-        </JButton>
+        </JButton>-->
     </JSection>
 </template>

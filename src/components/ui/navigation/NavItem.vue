@@ -4,30 +4,21 @@ const props = defineProps<{ to: string, text: string }>();
 
 <template>
     <li>
-        <RouterLink :to="props.to" class="nav-item">{{ props.text }}</RouterLink>
+        <RouterLink :to="props.to">{{ props.text }}</RouterLink>
     </li>
 </template>
 
 <style scoped>
 a {
-    @apply px-4 py-2 rounded-sm;
+    @apply px-4 py-2 rounded-sm transition-colors duration-300;
 }
 
-a:before {
-    @apply absolute content-['']
-        top-0 left-0 w-[100%] h-full
-        rounded-sm -z-1
-        transition-transform duration-300;
+a:not(.router-link-active):hover {
+    @apply text-primary dark:text-primary-dark;
 }
 
-a:before {
-    @apply bg-secondary dark:bg-secondary-dark
-        transform rotate-8 scale-0;
-}
-
-a:hover:before,
-a:focus:before {
-    @apply rotate-0;
+a.router-link-active * {
+    @apply text-light-200 dark:text-dark-300;
 }
 
 a.router-link-active:before {

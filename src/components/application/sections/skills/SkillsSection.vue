@@ -107,13 +107,13 @@ const secondRingIcons = [
 </script>
 
 <template>
-    <JSection title="Skills" class="relative min-h-screen">
+    <JSection title="Skills" class="relative min-w-full" style="aspect-ratio: 1;">
         <RotatorRing :items="firstRingIcons" />
 
         <RotatorRing :items="secondRingIcons" small :delay="500" />
 
         <DeveloperCodingIlustration
-            class="absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] max-w-full"
+            class="absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] h-auto max-w-full"
         />
     </JSection>
 </template>

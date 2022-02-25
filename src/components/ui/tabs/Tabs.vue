@@ -80,7 +80,7 @@ onBeforeUnmount(() => { listeners.forEach(listener => listener()); });
         uppercase
         text-base
         font-normal
-        text-gray-700
+        text-gray-500
         rounded-t-sm
         dark:(text-gray-300);
 }

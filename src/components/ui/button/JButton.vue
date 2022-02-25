@@ -48,6 +48,7 @@ const { icon } = toRefs(props);
 .j-button.primary {
     @apply relative
     !text-light-100
+    dark:!text-dark-700
     bg-primary hover:bg-transparent
     dark:(bg-primary-dark hover:bg-transparent);
 }
@@ -60,16 +61,22 @@ const { icon } = toRefs(props);
 .j-button.primary:after {
     @apply rounded-sm
         bg-gradient-to-r
-        from-primary to-secondary
-        dark:(from-primary-dark to-secondary-dark);
+        from-primary to-primary/75
+        dark:(from-primary-dark to-primary-dark/75);
 }
 
 .j-button.cta {
-    @apply min-w-[200px] font-bold;
+    @apply min-w-[200px] font-bold text-xl rounded-full;
+}
+
+.j-button.cta:before,
+.j-button.cta:after {
+    @apply rounded-full;
 }
 
 .j-button.icon {
     @apply rounded-full
+        h-[fit-content] w-[fit-content]
         p-2
         text-current
         bg-gray-400/5 hover:bg-gray-400/20;
