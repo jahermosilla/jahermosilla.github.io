@@ -1,3 +1,9 @@
+<script lang="ts">
+export default {
+    inheritAttrs: false
+}
+</script>
+
 <script setup lang="ts">
 import type { Component } from 'vue';
 
@@ -45,7 +51,7 @@ const AsyncComponent = defineAsyncComponent(() =>
 <template>
     <div ref="target" :class="{ 'min-h-screen': !loaded }"></div>
     <Suspense>
-        <AsyncComponent />
+        <AsyncComponent v-bind="$attrs" />
 
         <!-- TODO: Loading component -->
     </Suspense>

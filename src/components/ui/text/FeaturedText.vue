@@ -1,19 +1,24 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{ text?: string, height?: number }>(), {
-    height: 1
+import type { Component } from 'vue';
+
+const props = withDefaults(defineProps<{ is?: string | Component | Object, text?: string, height?: number }>(), {
+    is: 'span',
+    height: 1,
 });
 
 const { height } = toRefs(props);
 </script>
 
 <template>
-    <span class="featured">
+    <Component :is="is" class="featured">
         <slot>{{ props.text }}</slot>
-    </span>
+    </Component>
 </template>
 
 <style scoped>
 .featured {
+    text-decoration: none !important;
+
     @apply whitespace-nowrap relative text-primary dark:text-primary-dark;
 }
 
@@ -21,17 +26,17 @@ const { height } = toRefs(props);
     /* height: 2px;
     bottom: -1px; */
     height: calc(1px * v-bind(height));
-    bottom: calc(-1px * v-bind(height));
+    bottom: calc(-2px * v-bind(height));
 
     @apply absolute  content-['']
     w-full
-    left-0
+    right-0
     rounded-full
     bg-primary dark:bg-primary-dark
-    transform scale-x-0 duration-200;
+    transform transition-transform scale-x-0 duration-200 origin-right;
 }
 
 .featured:hover:after {
-    @apply scale-x-100;
+    @apply scale-x-100 origin-left left-0 right-auto;
 }
 </style>

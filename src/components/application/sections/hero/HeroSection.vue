@@ -15,8 +15,8 @@
                 <li>Just another human being</li>
             </ol>
 
-            <JButton component="a" href="/#/#about-section" primary cta class="featured-word mt-12">
-                <div class="mr-4">Want to know more?</div>
+            <JButton component="a" href="#about-section" primary cta class="featured-word mt-12">
+                <div class="mr-2">Want to know more?</div>
                 <MdiArrowDown class="ml-auto" />
             </JButton>
         </div>

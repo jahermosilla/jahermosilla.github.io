@@ -1,4 +1,5 @@
 import { MaybeRef } from "@vueuse/core";
+import type { Component } from "vue";
 
 const calculateElementHeight = (element: HTMLElement) => {
     const style = window.getComputedStyle(element);
@@ -8,7 +9,7 @@ const calculateElementHeight = (element: HTMLElement) => {
     return element.clientHeight + margins;
 }
 
-const computeBestHeight = async (contentElement: MaybeRef<HTMLElement | null>, desiredHeight: number) => {
+const computeBestHeight = async (contentElement: HTMLElement | null, desiredHeight: number) => {
     await nextTick();
 
     const el = unref(contentElement);
@@ -26,7 +27,7 @@ const computeBestHeight = async (contentElement: MaybeRef<HTMLElement | null>, d
     return desiredHeight;
 }
 
-export default function useResizable(element: MaybeRef<HTMLDivElement | null>, desiredHeight: number) {
+export default function useResizable(element: MaybeRef<HTMLDivElement | Component | null>, desiredHeight: number) {
     const optimalHeight = ref(desiredHeight);
     const contentHeight = ref(0);
     const opened = ref(false);
@@ -37,18 +38,16 @@ export default function useResizable(element: MaybeRef<HTMLDivElement | null>, d
     const setContentHeight = async () => {
         await nextTick();
 
-        const el = unref(element);
+        const el = ((unref(element) as any)!.$el ?? unref(element)) as HTMLDivElement;
 
-        contentHeight.value = el!.children!.length
-            ? Array.from(el!.children)
-                .map(element => calculateElementHeight(element as HTMLElement))
-                .reduce((a, b) => a + b)
-            : el!.scrollHeight;
+        contentHeight.value = el!.scrollHeight;
     };
 
     const setProperties = async () => {
+        const el = ((unref(element) as any)!.$el ?? unref(element)) as HTMLDivElement;
+
         setContentHeight();
-        optimalHeight.value = await computeBestHeight(element, desiredHeight);
+        optimalHeight.value = await computeBestHeight(el, desiredHeight);
     }
 
     const listeners = [

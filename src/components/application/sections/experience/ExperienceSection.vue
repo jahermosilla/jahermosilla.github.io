@@ -17,25 +17,7 @@ const computeIcon = (experienceType: string) => experienceType === 'education'
                     <Component :is="computeIcon(experience.type)" />
                 </template>
 
-                <JCard>
-                    <ResizableContainer :height="98" class="my-1">
-                        <template #title>
-                            <p
-                                class="text-sm uppercase"
-                            >{{ experience.duration[0] }} - {{ experience.duration[1] }}</p>
-
-                            <h1 class="font-bold text-xl">{{ experience.title }}</h1>
-                            <h2
-                                class="text-lg font-bold text-primary dark:text-primary-dark"
-                            >{{ experience.place }}</h2>
-                        </template>
-
-                        <Component
-                            :is="experience.description"
-                            class="text-gray-500 dark:text-light-900 mt-2"
-                        />
-                    </ResizableContainer>
-                </JCard>
+                <ExperienceCard v-bind="experience" />
             </JTimelineItem>
         </JTimeline>
 

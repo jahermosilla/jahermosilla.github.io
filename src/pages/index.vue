@@ -14,8 +14,8 @@ const StackExchangeSection = () => import('~/components/application/sections/sta
             <HeroSection />
         </Page>
 
-        <Content clipped>
-            <UseIntersectionObserver id="about-section" :component="AboutSection" />
+        <Content id="about-section" clipped>
+            <UseIntersectionObserver :component="AboutSection" />
         </Content>
 
         <Content>

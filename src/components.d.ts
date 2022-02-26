@@ -12,6 +12,7 @@ declare module 'vue' {
     Content: typeof import('./components/layout/Content.vue')['default']
     Degree: typeof import('./components/application/sections/experience/descriptions/Degree.vue')['default']
     DeveloperCodingIlustration: typeof import('./components/application/sections/skills/DeveloperCodingIlustration.vue')['default']
+    ExperienceCard: typeof import('./components/application/sections/experience/ExperienceCard.vue')['default']
     ExperienceSection: typeof import('./components/application/sections/experience/ExperienceSection.vue')['default']
     FaceImage: typeof import('./components/application/sections/hero/FaceImage.vue')['default']
     FeaturedText: typeof import('./components/ui/text/FeaturedText.vue')['default']

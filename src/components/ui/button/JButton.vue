@@ -8,6 +8,7 @@ export default {
 interface JButtonProps {
     icon?: boolean,
     primary?: boolean,
+    outline?: boolean,
     cta?: boolean,
     component?: 'a' | 'button'
 }
@@ -23,7 +24,7 @@ const props = withDefaults(
     }
 );
 
-const { icon } = toRefs(props);
+const { icon, primary, cta, outline } = toRefs(props);
 </script>
 
 <template>
@@ -31,7 +32,7 @@ const { icon } = toRefs(props);
         v-bind="$attrs"
         :is="props.component"
         class="j-button"
-        :class="{ icon, primary, cta }"
+        :class="{ icon, primary, cta, outline }"
     >
         <slot />
     </Component>
@@ -39,6 +40,8 @@ const { icon } = toRefs(props);
 
 <style>
 .j-button {
+    text-decoration: none;
+
     @apply flex items-center py-2 px-4 w-[fit-content] rounded-sm
         cursor-pointer
         transition-colors
@@ -80,5 +83,16 @@ const { icon } = toRefs(props);
         p-2
         text-current
         bg-gray-400/5 hover:bg-gray-400/20;
+}
+
+.j-button.outline {
+    @apply font-bold
+        bg-transparent
+        border-2 border-primary dark:border-primary-dark
+        text-primary dark:text-primary-dark;
+}
+
+.j-button.outline:hover {
+    @apply bg-primary/10 dark:bg-primary-dark/10;
 }
 </style>
