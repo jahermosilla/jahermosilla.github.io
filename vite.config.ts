@@ -10,9 +10,7 @@ import autoImportComponents from 'unplugin-vue-components/vite';
 import windiCSS from 'vite-plugin-windicss';
 import icons from 'unplugin-icons/vite';
 import iconsResolver from 'unplugin-icons/resolver';
-import plainText from 'vite-plugin-virtual-plain-text';
 import { ViteWebfontDownload as googleFonts } from 'vite-plugin-webfont-dl';
-
 
 import { Options as AutoImportOptions } from 'unplugin-auto-import/dist/types';
 import { Options as AutoImportComponentsOptions } from 'unplugin-vue-components/dist/types';
@@ -60,7 +58,6 @@ export default defineConfig({
 
   plugins: [
     vue(vueOptions),
-    plainText(),
     markdown(),
     pages(pagesOptions),
     layouts(),

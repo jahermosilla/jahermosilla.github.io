@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Map as MapOpenlayers, View as ViewOpenlayers } from 'ol';
+import { loadavg } from 'os';
 import { Ref } from 'vue';
 import useOsmLayer from './use-osm-layer';
 
@@ -26,7 +27,10 @@ onMounted(() => {
 
     const map = new MapOpenlayers(mapOptions);
 
-    map.addLayer(useOsmLayer(map));
+    (async function load() {
+        map.addLayer(await useOsmLayer(map));
+
+    }());
 });
 </script>
 

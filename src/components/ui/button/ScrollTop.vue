@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 const { height } = useWindowSize();
-const { y: scrolled, isScrolling } = useScroll(import.meta.env ? window : null);
+const { y: scrolled, isScrolling } = useScroll(import.meta.env.SSR ? null : window);
 const show = computed(() => scrolled.value > height.value);
 
 const handler = () => !isScrolling.value && window.scrollTo({ top: 0 })

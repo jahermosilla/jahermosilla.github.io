@@ -49,7 +49,6 @@
     "vite": "^2.7.2",
     "vite-plugin-md": "^0.11.8",
     "vite-plugin-pages": "^0.20.0",
-    "vite-plugin-virtual-plain-text": "^1.2.2",
     "vite-plugin-vue-layouts": "^0.5.0",
     "vite-plugin-webfont-dl": "^1.0.9",
     "vite-plugin-windicss": "^1.6.3",

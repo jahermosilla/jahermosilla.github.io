@@ -5,10 +5,6 @@ const props = defineProps<{
     achievementLink: string
     tags: string[]
 }>();
-
-function getPdfUrl(resource: string) {
-    return `src/assets/courses/achievements/${resource}`;
-}
 </script>
 
 <template>
@@ -27,7 +23,7 @@ function getPdfUrl(resource: string) {
         <div class="flex mt-4 items-end">
             <JButton
                 component="a"
-                :href="getPdfUrl(props.achievementLink)"
+                :href="props.achievementLink"
                 target="__blank"
                 outline
                 cta

@@ -1,18 +1,16 @@
 import OSMXML from 'ol/format/OSMXML.js';
 import VectorSource from 'ol/source/Vector.js';
-import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
-import { Vector as VectorLayer } from 'ol/layer';
+import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style.js';
+import { Vector as VectorLayer } from 'ol/layer.js';
 // import { bbox as bboxStrategy } from 'ol/loadingstrategy';
 // import { transformExtent } from 'ol/proj';
 import type MapOpenlayers from 'ol/Map.js';
-import { StyleFunction } from 'ol/style/Style';
+import { StyleFunction } from 'ol/style/Style.js';
 
-import { plainText as osmData } from '@virtual:plain-text/src/assets/osm.txt';
-
-export default function useOsmLayer(map: MapOpenlayers) {
+export default async function useOsmLayer(map: MapOpenlayers) {
   const vectorSource = new VectorSource({
     format: new OSMXML(),
-    features: readOsm(map)
+    features: await readOsm(map)
   });
 
   const vector = new VectorLayer({
@@ -23,7 +21,11 @@ export default function useOsmLayer(map: MapOpenlayers) {
   return vector;
 }
 
-function readOsm(map: MapOpenlayers) {
+async function readOsm(map: MapOpenlayers) {
+  const osmData = await fetch('/osm.txt').then(res => res.text());
+
+  console.log(osmData);
+
   const readerProperties = {
     featureProjection: map.getView().getProjection(),
   };
