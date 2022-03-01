@@ -2,136 +2,213 @@
     {
         "name": "DDD en TypeScript: Modelado y arquitectura",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FhVKb8kDjSHBqF5NUe3NA?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=be2fa328e8f126fefee76add45fd643b",
-        "tags": ["Arquitectura de software", "Domain Driven Design", "TypeScript", "Backend"]
+        "tags": [
+            "Arquitectura de software",
+            "Backend",
+            "Domain Driven Design",
+            "TypeScript"
+        ]
     },
     {
         "name": "Symfony mantenible y escalable",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FkzdYkv2aR5eIrpjKoU1t?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=5cdbefb6a87451d7263ff746b6306cbc",
-        "tags": ["PHP", "Symfony", "Backend"]
+        "tags": [
+            "PHP",
+            "Symfony",
+            "Backend"
+        ]
     },
     {
         "name": "AWS: Autoescalado de aplicaciones con ALB y ASG",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2Fu6cg28XT2KHSum0tBqUw?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=09dd5c30521f28d7f73239a05933a754",
-        "tags": ["AWS", "DevOps"]
+        "tags": [
+            "AWS",
+            "DevOps"
+        ]
     },
     {
         "name": "Gestión Estado en React",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2F4f6xwJznSBGTw8sJPMhp?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=c88a22693a17c2aad5a8f7f56fcaec87",
-        "tags": ["React", "Frontend"]
+        "tags": [
+            "React",
+            "Frontend"
+        ]
     },
     {
         "name": "Crea una app con VueJS y Jest aplicando TDD",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FCcT5LXgOSPuz9OM1JabA?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=be106eb68c01eb32862c912749a90f9d",
-        "tags": ["VueJS", "Jest", "Testing", "Frontend"]
+        "tags": [
+            "VueJS",
+            "Jest",
+            "Testing",
+            "Frontend"
+        ]
     },
     {
         "name": "Buenas prácticas de BDD con Gherkin (Cucumber, Behat…)",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FeVgFgZ6dRnmVSYmmmpHo?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=f416638b007812ba70d04d3349a3d208",
-        "tags": ["Testing"]
+        "tags": [
+            "Testing"
+        ]
     },
     {
         "name": "Makefile: El punto de entrada a tus proyectos",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FNXZQ7gKES1u3l8RhLiom?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=2cf84da9d059864a94f7909e3acbc97b",
-        "tags": ["Tooling"]
+        "tags": [
+            "Tooling"
+        ]
     },
     {
         "name": "Todo sobre los dotfiles",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FD9xbuZ1zThqeGQJ4YjDi?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=59bf4217b0651a831a3d12de4ed94eca",
-        "tags": ["Tooling"]
+        "tags": [
+            "Tooling"
+        ]
     },
     {
         "name": "Web Performance",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2Fp789fNTURcmS2z3KzwqI?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=ecfde275cc3e5d185c0487b166d292e4",
-        "tags": ["Frontend"]
+        "tags": [
+            "Frontend"
+        ]
     },
     {
         "name": "Patrones de Diseño: Creacionales",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FieJbrXdYStGaTmkGb303?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=816dd2e02fa625cc0a218ad4f405e338",
-        "tags": ["Arquitectura de software"]
+        "tags": [
+            "Arquitectura de software"
+        ]
     },
     {
         "name": "De JavaScript a TypeScript",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FcN43RkhRm6cRNVYpeOyw?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=188afe9ec645e55720bfe2d406310f23",
-        "tags": ["JavaScript", "TypeScript"]
+        "tags": [
+            "JavaScript",
+            "TypeScript"
+        ]
     },
     {
         "name": "Refactoring de Code Smells a Clean Code: Bloaters",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FmXqyXbceTZOlwqwhvOtA?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=28ff2033a1667480db3edf08c9271163",
-        "tags": ["Refactoring", "Arquitectura de software"]
+        "tags": [
+            "Refactoring",
+            "Arquitectura de software"
+        ]
     },
     {
         "name": "Arquitectura CSS",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FnikpOEMeRdKyE5JNnAMA?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=55235d41e2891ecf33f4d56e1d30f839",
-        "tags": ["Arquitectura de software", "Frontend"]
+        "tags": [
+            "Arquitectura de software",
+            "Frontend"
+        ]
     },
     {
         "name": "Refactoring de Code Smells a Clean Code: Change Preventers",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2Fw5RX8gRvQ8SBhSynWnWM?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=7d9fcb6673ab47759702437a2e2d85a1",
-        "tags": ["Refactoring", "Arquitectura de software"]
+        "tags": [
+            "Refactoring",
+            "Arquitectura de software"
+        ]
     },
     {
         "name": "Vue 3: Novedades aplicadas al mundo real",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FPGJknksQumbDKRXfmYZA?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=4792d4a2854fe80adcb811de780a6f6a",
-        "tags": ["VueJS", "Frontend"]
+        "tags": [
+            "VueJS",
+            "Frontend"
+        ]
     },
     {
         "name": "CSS Grid a fondo",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FmgD8wkTmT4GcjpGW8AQV?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=5bf50ff80902e65aa6dfa0eb897b9f14",
-        "tags": ["Frontend"]
+        "tags": [
+            "Frontend"
+        ]
     },
     {
         "name": "Comunicación entre microservicios: Event-Driven Architecture",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FQdn7wFncTisi0kSSqVN0?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=7eb03cde0c29dd088e7a2dc3b2976055",
-        "tags": ["Arquitectura de software"]
+        "tags": [
+            "Arquitectura de software"
+        ]
     },
     {
         "name": "JavaScript moderno: Buenas prácticas para empezar y refactorizar aplicaciones",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FWYRz335mQsSBkrbQvf0V?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=9264bb47c040d5f4776d521839e4b7b7",
-        "tags": ["JavaScript", "Refactoring"]
+        "tags": [
+            "JavaScript",
+            "Refactoring"
+        ]
     },
     {
         "name": "Setup Linux para Programar",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FtZflFzQNulXFIsNWudpA?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=9d2e0f7d29554c2206414a29d7d0cb43",
-        "tags": ["Tooling", "Linux"]
+        "tags": [
+            "Tooling",
+            "Linux"
+        ]
     },
     {
         "name": "ELK+Beats: Centraliza logs con Elastic Stack",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FlKGICZwrTO6ZeHwrkgbb?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=8f8b76525d3400c4147f81ae874d6021",
-        "tags": ["ElasticSearch", "Backend"]
+        "tags": [
+            "ElasticSearch",
+            "Backend"
+        ]
     },
     {
         "name": "Domain-Driven Design - DDD Aplicado",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FlXCeyUnJTt67QtPWSaoE?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=656bf6b0b6af5acfb71b7fd00e3fe658",
-        "tags": ["Arquitectura de software", "Domain Driven Design"]
+        "tags": [
+            "Arquitectura de software",
+            "Domain Driven Design"
+        ]
     },
     {
         "name": "DDD en Java",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2F5IBCIg3ZQ9anyFVKpnzV?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=28f8629d490905501bb17a8dae15f55c",
-        "tags": ["Domain Driven Design", "Backend", "Java"]
+        "tags": [
+            "Domain Driven Design",
+            "Backend",
+            "Java"
+        ]
     },
     {
         "name": "Git: Introducción y trabajo en equipo",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FXbb0kCjMSo2sg8EOzJUd?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=c81af60b508203b04efbe5cab80bce09",
-        "tags": ["Git"]
+        "tags": [
+            "Git"
+        ]
     },
     {
         "name": "Testing en frontend",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2Fz8dODWCvSue6pMtK9Kdx?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=2a30536622003c06bfd16f3984d29f3e",
-        "tags": ["Frontend", "Testing"]
+        "tags": [
+            "Frontend",
+            "Testing"
+        ]
     },
     {
         "name": "Testing: Introducción y buenas prácticas",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FcZ2BYaGqSPSzNpaDwneU?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=0cfa833a5fa4e69e279e977da317f9e0",
-        "tags": ["Testing", "Backend"]
+        "tags": [
+            "Testing",
+            "Backend"
+        ]
     },
     {
         "name": "Principios SOLID aplicados",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FIciUCbZkTC2WlSc5zyya?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=60f2a6d5ee06a80de14ffd3209a469cf",
-        "tags": ["Arquitectura de software"]
+        "tags": [
+            "Arquitectura de software"
+        ]
     },
     {
         "name": "Arquitectura Hexagonal",
         "image": "https://pathwright.imgix.net/https%3A%2F%2Fcdn.filestackcontent.com%2FDYWJYE5RMC0bkd8nCp0u?w=500&h=375&fit=crop&width=500&height=375&ixlib=js-1.4.1&s=51961e794e92894f75a09634bfde02c0",
-        "tags": ["Arquitectura de software"]
+        "tags": [
+            "Arquitectura de software"
+        ]
     }
 ]

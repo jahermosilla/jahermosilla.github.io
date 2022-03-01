@@ -30,7 +30,7 @@ const showMoreText = computed(() => opened.value ? 'Show less' : 'Show more');
 
         <Component
             ref="container"
-            class="resizable"
+            class="resizable mt-4"
             :style="{ maxHeight: height }"
             :is="props.description"
         />
@@ -46,6 +46,6 @@ const showMoreText = computed(() => opened.value ? 'Show less' : 'Show more');
 
 <style scoped>
 .resizable {
-    @apply overflow-hidden transition-all duration-200 lg:max-w-[72ch];
+    @apply overflow-hidden transition-all duration-200 lg:max-w-[80ch];
 }
 </style>

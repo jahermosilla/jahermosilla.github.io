@@ -6,7 +6,9 @@ const props = defineProps<{ to: string, text: string }>();
 
 <template>
     <li>
-        <FeaturedText :text="props.text" :is="RouterLink" :to="props.to" :height="4" />
+        <FeaturedText :height="4">
+            <RouterLink :to="props.to">{{ props.text }}</RouterLink>
+        </FeaturedText>
     </li>
 </template>
 

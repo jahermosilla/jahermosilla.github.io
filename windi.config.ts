@@ -1,12 +1,31 @@
 import { defineConfig } from 'windicss/helpers';
 import typography from 'windicss/plugin/typography';
 
+const heroPatterns = require('@windicss/plugin-heropatterns')({
+  // the list of patterns you want to generate a class for
+  // the names must be in kebab-case
+  // an empty array will generate all 87 patterns
+  patterns: ['circuit-board'],
+
+  // The foreground colors of the pattern
+  colors: {
+    normal: '#3949ab',
+    'dark': '#8e99f3', // also works with rgb(0,0,205)
+  },
+
+  // The foreground opacity
+  opacity: {
+    default: '0.6'
+  },
+});
+
 export default defineConfig({
   darkMode: 'class',
 
   plugins: [
     typography(),
     require('@windicss/plugin-scrollbar'),
+    heroPatterns
   ],
 
   shortcuts: {
@@ -29,46 +48,8 @@ export default defineConfig({
           light: '#8e99f3',
           dark: '#5e92f3',
           darker: '#171417'
-        },
-        // secondary: {
-        //   DEFAULT: '#8e24aa',
-        //   light: '#c158dc',
-        //   dark: '#c158dc',
-        //   darker: '#171417'
-        // },
-
+        }
       }
     }
   },
-
-  // theme: {
-  //   extend: {
-  //     typography: {
-  //       DEFAULT: {
-  //         css: {
-  //           maxWidth: '65ch',
-  //           color: 'inherit',
-  //           a: {
-  //             'color': 'inherit',
-  //             'opacity': 0.75,
-  //             'fontWeight': '500',
-  //             'textDecoration': 'underline',
-  //             '&:hover': {
-  //               opacity: 1,
-  //               color: colors.teal[600],
-  //             },
-  //           },
-  //           b: { color: 'inherit' },
-  //           strong: { color: 'inherit' },
-  //           em: { color: 'inherit' },
-  //           h1: { color: 'inherit' },
-  //           h2: { color: 'inherit' },
-  //           h3: { color: 'inherit' },
-  //           h4: { color: 'inherit' },
-  //           code: { color: 'inherit' },
-  //         },
-  //       },
-  //     },
-  //   },
-  // },
 })

@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="vite-plugin-virtual-plain-text/virtual-assets" />
 
 declare module '*.vue' {
   import { DefineComponent } from 'vue'

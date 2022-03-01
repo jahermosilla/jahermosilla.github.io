@@ -23,7 +23,7 @@ const computeIcon = (experienceType: string) => experienceType === 'education'
 
         <p class="mt-6 mb-2 text-xl">I have also made a lot of courses</p>
 
-        <!-- <FeaturedCourses /> -->
+        <FeaturedCourses />
         <!-- 
         <JButton component="a" primary cta>
             See the full list

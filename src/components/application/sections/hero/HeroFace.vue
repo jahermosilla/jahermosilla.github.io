@@ -1,35 +1,34 @@
 <template>
-    <div class="j-background group">
-        <div
-            class="slide-right !bg-transparent"
-            style="--grid-row: 2 / span 2; --grid-col: 2 / span 2;"
-        >
-            <FaceImage class="image-face group-hover:(stroke-transparent fill-current)" />
+    <div class="outside clippy group">
+        <div class="clippy inside">
+            <div class="j-background">
+                <div
+                    class="slide-right !bg-transparent"
+                    style="--grid-row: 2 / span 2; --grid-col: 2 / span 2;"
+                >
+                    <FaceImage class="image-face group-hover:(stroke-transparent fill-current)" />
+                </div>
+
+                <div
+                    class="j-square j-square--right"
+                    style="--grid-row: 1 / span 3; --grid-col: 4;"
+                />
+
+                <div
+                    class="j-square j-square--left"
+                    style="--grid-row: 2 / span 3; --grid-col: 1;"
+                />
+            </div>
         </div>
-
-        <div class="j-square j-square--right" style="--grid-row: 1 / span 3; --grid-col: 4;" />
-
-        <div class="j-square j-square--left" style="--grid-row: 2 / span 3; --grid-col: 1;" />
     </div>
 </template>
 
 
 <style scoped>
-.j-background {
-    @apply p-4
-        rounded-md
-        grid
-        grid-cols-4
-        grid-rows-4
-        gap-4
-        bg-gradient-to-r
-        bg-primary dark:bg-primary-dark;
-
+.clippy {
     /* force antialiasing */
     will-change: transform;
-    transition: color 0.2s ease-in, clip-path 0.3s cubic-bezier(1, -0.1, 0, 2);
-    transition-delay: 0.1s;
-    aspect-ratio: 1;
+    transition: clip-path 0.3s cubic-bezier(1, -0.1, 0, 2);
 
     clip-path: polygon(
         50% 0%,
@@ -44,7 +43,8 @@
     );
 }
 
-.j-background:hover {
+.outside:hover,
+.outside:hover .clippy {
     transition-delay: 0s;
 
     clip-path: polygon(
@@ -58,6 +58,33 @@
         0% 43%,
         0 0
     );
+}
+
+.j-background {
+    @apply p-4
+        max-h-full
+        max-w-full
+        grid
+        grid-cols-4
+        grid-rows-4
+        gap-4;
+}
+
+svg {
+    @apply w-full h-full;
+}
+
+.outside {
+    aspect-ratio: 1;
+
+    @apply relative bg-primary dark:bg-primary-dark rounded-md;
+}
+
+.inside {
+    @apply absolute inset-1
+        app-background
+        bg-hero-circuit-board-normal dark:bg-hero-circuit-board-dark
+        rounded-md;
 }
 
 .image-face {
@@ -74,8 +101,7 @@
     @apply flex justify-center items-center
         bg-cover
         rounded-md
-        app-background
-        00;
+        bg-primary dark:bg-primary-dark;
 }
 
 .j-square--left,

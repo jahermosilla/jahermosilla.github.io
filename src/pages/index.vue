@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import UseIntersectionObserver from '~/components/ui/misc/UseIntersectionObserver.vue';
+import ScrollTop from '~/components/ui/button/ScrollTop.vue';
 
 const AboutSection = () => import('~/components/application/sections/about/AboutSection.vue');
 const ExperienceSection = () => import('~/components/application/sections/experience/ExperienceSection.vue');
@@ -10,6 +11,7 @@ const StackExchangeSection = () => import('~/components/application/sections/sta
 
 <template>
     <main>
+        <ScrollTop></ScrollTop>
         <Page>
             <HeroSection />
         </Page>
@@ -30,8 +32,6 @@ const StackExchangeSection = () => import('~/components/application/sections/sta
             <UseIntersectionObserver :component="StackExchangeSection" />
         </Content>
 
-        <Content>
-            <UseIntersectionObserver :component="FooterSection" />
-        </Content>
+        <UseIntersectionObserver :component="FooterSection" />
     </main>
 </template>

@@ -1,24 +1,23 @@
 <script setup lang="ts">
-import MapOpenlayers from 'ol/Map';
-import ViewOpenlayers, { ViewOptions } from 'ol/View';
-import { MapOptions } from 'ol/PluggableMap';
+import { Map as MapOpenlayers, View as ViewOpenlayers } from 'ol';
 import { Ref } from 'vue';
 import useOsmLayer from './use-osm-layer';
 
 const target: Ref<HTMLElement | null> = ref(null);
 
 onMounted(() => {
-    const layers: typeof mapOptions['layers'] = [
+    console.log(target.value);
+    const layers = [
         //new TileLayer({ source: new OsmSource() })
     ];
 
-    const viewOptions: ViewOptions = {
-        center: [-52118.110005, 4783084.785698],
+    const viewOptions = {
+        center: [-52100, 4783075],
         maxZoom: 19,
         zoom: 17,
     }
 
-    const mapOptions: MapOptions = {
+    const mapOptions = {
         layers,
         view: new ViewOpenlayers(viewOptions),
         controls: [],
@@ -38,7 +37,6 @@ onMounted(() => {
 
 <style scoped>
 .j-bg-map {
-    width: 100%;
-    height: 100%;
+    @apply w-full h-full;
 }
 </style>

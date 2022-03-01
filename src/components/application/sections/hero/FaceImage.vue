@@ -2,7 +2,7 @@
     <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 600.000000 600.000000"
+        viewBox="50 0 450.000000 600.000000"
         preserveAspectRatio="xMidYMid meet"
     >
         <g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)">
@@ -376,9 +376,8 @@ svg {
     stroke-dasharray: 3000px;
     stroke-dashoffset: 6000px;
 
-    @apply text-gray-200 dark:text-gray-800;
-
-    @apply fill-transparent stroke-current;
+    @apply !text-primary dark:!text-primary-dark
+        fill-transparent stroke-current;
 
     animation: face-animation 2s linear infinite;
 }

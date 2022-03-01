@@ -44,7 +44,7 @@ const { icon, primary, cta, outline } = toRefs(props);
 
     @apply flex items-center py-2 px-4 w-[fit-content] rounded-sm
         cursor-pointer
-        transition-colors
+        transition-all
         text-white dark:text-black duration-500;
 }
 
@@ -62,27 +62,37 @@ const { icon, primary, cta, outline } = toRefs(props);
 
 .j-button.primary:before,
 .j-button.primary:after {
-    @apply rounded-sm
-        bg-gradient-to-r
+    border-radius: inherit;
+
+    @apply bg-gradient-to-r
         from-primary to-primary/75
         dark:(from-primary-dark to-primary-dark/75);
 }
 
 .j-button.cta {
-    @apply min-w-[200px] font-bold text-xl rounded-full;
+    will-change: border-radius;
+    @apply min-w-[200px] font-bold text-xl rounded-3xl;
+}
+
+.j-button.cta:hover:after,
+.j-button.cta:hover:before,
+.j-button.cta:hover {
+    @apply rounded-sm;
 }
 
 .j-button.cta:before,
 .j-button.cta:after {
-    @apply rounded-full;
+    will-change: border-radius;
+    @apply rounded-3xl transition-all duration-500;
 }
 
 .j-button.icon {
-    @apply rounded-full
+    @apply rounded-3xl
         h-[fit-content] w-[fit-content]
         p-2
         text-current
-        bg-gray-400/5 hover:bg-gray-400/20;
+        bg-gray-400/5 hover:bg-gray-400/20
+        dark:(bg-gray-50/5 hover:bg-gray-50/20);
 }
 
 .j-button.outline {
