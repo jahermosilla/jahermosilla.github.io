@@ -20,11 +20,16 @@
                 </JButton>
             </FeaturedText>
 
-            <JButton icon is="a" class="text-2xl">
+            <JButton
+                icon
+                component="a"
+                href="https://es.linkedin.com/in/jose-%C3%A1ngel-hermosilla-rodrigo-70a590147"
+                class="text-2xl"
+            >
                 <MdiLinkedin class="text-blue-600 dark:text-primary-dark" />
             </JButton>
 
-            <JButton icon is="a" class="text-2xl">
+            <JButton icon component="a" href="https://github.com/jahermosilla" class="text-2xl">
                 <MdiGithub class="text-gray-800 dark:text-gray-100" />
             </JButton>
         </div>

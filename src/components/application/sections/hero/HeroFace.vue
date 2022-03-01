@@ -6,7 +6,7 @@
                     class="slide-right !bg-transparent"
                     style="--grid-row: 2 / span 2; --grid-col: 2 / span 2;"
                 >
-                    <FaceImage class="image-face group-hover:(stroke-transparent fill-current)" />
+                    <FaceImage class="image-face group-hover:(!stroke-transparent !fill-current)" />
                 </div>
 
                 <div
@@ -101,7 +101,7 @@ svg {
     @apply flex justify-center items-center
         bg-cover
         rounded-md
-        bg-primary dark:bg-primary-dark;
+        bg-primary/75 dark:bg-primary-dark/75;
 }
 
 .j-square--left,

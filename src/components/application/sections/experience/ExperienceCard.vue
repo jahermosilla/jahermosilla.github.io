@@ -5,7 +5,6 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { watchPostEffect } from 'vue';
 import type { Component } from 'vue';
 import useResizable from '~/components/ui/misc/use-resizable';
 
@@ -30,7 +29,7 @@ const showMoreText = computed(() => opened.value ? 'Show less' : 'Show more');
 
         <Component
             ref="container"
-            class="resizable mt-4"
+            class="resizable mt-4 text-lg"
             :style="{ maxHeight: height }"
             :is="props.description"
         />

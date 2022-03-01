@@ -11,7 +11,7 @@ const handler = () => !isScrolling.value && window.scrollTo({ top: 0 })
     <Transition name="scale">
         <div v-if="show" class="!fixed bottom-3 right-3 z-999">
             <JButton @click="handler" icon primary>
-                <MdiArrowUp class="text-lg" />
+                <MdiArrowUp class="text-2xl" />
             </JButton>
         </div>
     </Transition>

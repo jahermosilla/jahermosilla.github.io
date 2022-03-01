@@ -30,14 +30,14 @@
                 <!-- -->
                 and the
                 <FeaturedText text="Open source ecosystem" />.
-                I like to stay tuned with everything related to web development.
+                I like to be aware of everything related to web development.
             </p>
         </div>
 
         <div>
             <!-- <p class="mr-2 text-4xl">🧍</p> -->
             <p>
-                Apart from all related with software, I'm
+                Apart from everything related to software, I'm
                 <FeaturedText text="just another human being" />
                 <!-- -->
                 who loves and respect our
@@ -47,7 +47,7 @@
                 and
                 <FeaturedText text="nature 🍃" />
                 <!-- -->
-                and enjoys to take time with family & friends.
+                and enjoys spending time with family & friends.
             </p>
         </div>
     </article>

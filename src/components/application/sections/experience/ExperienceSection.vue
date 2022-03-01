@@ -21,13 +21,10 @@ const computeIcon = (experienceType: string) => experienceType === 'education'
             </JTimelineItem>
         </JTimeline>
 
-        <p class="mt-6 mb-2 text-xl">I have also made a lot of courses</p>
+        <p
+            class="mt-12 mb-4 text-2xl text-primary dark:text-primary-dark"
+        >I have also made a lot of courses!</p>
 
         <FeaturedCourses />
-        <!-- 
-        <JButton component="a" primary cta>
-            See the full list
-            <MdiArrowRight class="ml-auto" />
-        </JButton>-->
     </JSection>
 </template>

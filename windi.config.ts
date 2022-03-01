@@ -15,7 +15,7 @@ const heroPatterns = require('@windicss/plugin-heropatterns')({
 
   // The foreground opacity
   opacity: {
-    default: '0.6'
+    default: '0.8'
   },
 });
 
