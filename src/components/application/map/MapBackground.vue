@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Map as MapOpenlayers, View as ViewOpenlayers } from 'ol';
-import { loadavg } from 'os';
 import { Ref } from 'vue';
 import useOsmLayer from './use-osm-layer';
 
