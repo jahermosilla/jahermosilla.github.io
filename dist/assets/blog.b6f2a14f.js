@@ -1,0 +1,1 @@
+import{_ as o}from"./app.b3c73975.js";import{I as r,a as t,o as c}from"./vendor.9ea455b5.js";const n={};function a(s,_){const e=r("RouterView");return c(),t(e)}var m=o(n,[["render",a]]);export{m as default};
