@@ -18,6 +18,10 @@ a,
   @apply relative;
 }
 
+.text-big-fluid {
+  font-size: clamp(40px, 8vw, 60px) !important;
+}
+
 /* 
 a:after,
 .featured-word:after {
