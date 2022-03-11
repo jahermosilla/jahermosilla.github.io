@@ -9,8 +9,8 @@ const heroPatterns = require('@windicss/plugin-heropatterns')({
 
   // The foreground colors of the pattern
   colors: {
-    normal: '#3949ab',
-    'dark': '#8e99f3', // also works with rgb(0,0,205)
+    normal: '#0023b6',
+    'dark': '#6bdcd9', // also works with rgb(0,0,205)
   },
 
   // The foreground opacity
@@ -30,8 +30,8 @@ export default defineConfig({
 
   shortcuts: {
     'page-padding': 'px-8 md:px-16 lg:px-24 xl:px-48 2xl:px-60',
-    'app-background': 'bg-light-100 dark:bg-primary-darker',
-    'app-header-background': 'bg-light-100/80 dark:bg-primary-darker/80'
+    'app-background': 'bg-app-background dark:bg-app-background-dark',
+    'app-header-background': 'bg-app-background/80 dark:bg-app-background-dark/80'
   },
 
   variants: {
@@ -44,10 +44,13 @@ export default defineConfig({
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#3949ab',
-          light: '#8e99f3',
-          dark: '#5e92f3',
-          darker: '#171417'
+          DEFAULT: '#0023b6',
+          dark: '#6bdcd9',
+        },
+
+        'app-background': {
+          DEFAULT: '#f1eff1',
+          dark: '#2c214f',
         }
       }
     }

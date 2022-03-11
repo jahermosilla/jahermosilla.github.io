@@ -9,8 +9,14 @@ const handler = () => !isScrolling.value && window.scrollTo({ top: 0 })
 
 <template>
     <Transition name="scale">
-        <div v-if="show" class="!fixed bottom-3 right-3 z-999">
-            <JButton @click="handler" icon primary>
+        <div v-if="show" class="!fixed bottom-3 right-3 z-10">
+            <JButton
+                @click="handler"
+                primary
+                aria-label="Scroll to top"
+                class="rounded-full shadow-lg"
+                style="aspect-ratio: 1;"
+            >
                 <MdiArrowUp class="text-2xl" />
             </JButton>
         </div>

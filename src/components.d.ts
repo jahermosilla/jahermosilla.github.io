@@ -36,6 +36,7 @@ declare module 'vue' {
     MdiArrowDown: typeof import('~icons/mdi/arrow-down')['default']
     MdiArrowRight: typeof import('~icons/mdi/arrow-right')['default']
     MdiArrowUp: typeof import('~icons/mdi/arrow-up')['default']
+    MdiCardAccountDetailsStarOutline: typeof import('~icons/mdi/card-account-details-star-outline')['default']
     MdiGithub: typeof import('~icons/mdi/github')['default']
     MdiHeart: typeof import('~icons/mdi/heart')['default']
     MdiInformation: typeof import('~icons/mdi/information')['default']

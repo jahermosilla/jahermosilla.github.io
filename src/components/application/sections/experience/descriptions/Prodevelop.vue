@@ -1,10 +1,22 @@
 <template>
     <div>
-        Prodevelop is a medium size company whose main focus is the portuary sector.
-        I have worked in several internal products, such as: Posidonia Space, Local Space,...
-        My main project in the company, Mia Tracking, was an ad-hoc project for an insurancy comany, that consisted in a web application that tracked realtime fleet positions and status to target incidents.
-        I did a lot of things and used a lot of technologies such as message brokers (Kafka),
-        Dockerization of projects.
-        I also helped the I+D team dockerizing and deploying a machine learning model!
+        <p>Prodevelop is a medium size company (50 - 100) created in 1993. Its main focus is developing software for the port sector and provides consulting services.</p>
+
+        <p>I've worked in some internal projects:</p>
+
+        <ul class="list-circle list-inside ml-4">
+            <li>
+                <FeaturedText is="a" href="#">Local Space</FeaturedText>:
+                <!-- -->
+                Multi-platform corporate GIS for City Councils directly integrated with various data sources: File Manager, Municipal Register, Street Map, real-time sensors, social networks, SDI’s, Cadastre, open data portals, etc.
+            </li>
+
+            <li>
+                <FeaturedText is="a" href="#">Posidonia Space</FeaturedText>: It's Prodevelop's solution for the integral management of port space using a corporate Geographic Information System.
+            </li>
+        </ul>
+
+        <p>The most important project</p>
+        <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis amet, et quidem nostrum nam iure, facere non tenetur recusandae quos ipsa autem deleniti suscipit sit magnam praesentium perferendis. Dolorum commodi architecto eveniet obcaecati ex. Nostrum ipsum consectetur et hic, corrupti itaque enim soluta vero ipsam obcaecati, labore nihil, veritatis architecto!</p> -->
     </div>
 </template>

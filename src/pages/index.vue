@@ -11,7 +11,6 @@ const StackExchangeSection = () => import('~/components/application/sections/sta
 
 <template>
     <main>
-        <ScrollTop></ScrollTop>
         <Page>
             <HeroSection />
         </Page>

@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-    <JCard class="course-card hover:bg-primary/5">
+    <JCard class="course-card hover:(bg-primary/5 dark:bg-primary-dark/5)">
         <h1
             class="mb-6 text-lg font-bold text-gray-600 dark:text-gray-200 overflow-ellipsis overflow-hidden whitespace-nowrap"
         >{{ props.name }}</h1>
@@ -30,7 +30,14 @@ const props = defineProps<{
                 class="!text-sm justify-center"
             >See achievement</JButton>
 
-            <JButton icon component="a" target="__blank" :href="props.link" class="ml-auto">
+            <JButton
+                icon
+                component="a"
+                target="__blank"
+                :href="props.link"
+                aria-label="Link to the official page of the course"
+                class="ml-auto"
+            >
                 <MdiInformation class="text-lg text-primary dark:text-primary-dark" />
             </JButton>
         </div>

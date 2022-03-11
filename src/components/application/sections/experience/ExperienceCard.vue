@@ -39,7 +39,7 @@ const showMoreText = computed(() => opened.value ? 'Show less' : 'Show more');
         v-if="showArrow"
         @click="toggle"
         outline
-        class="ml-4 min-w-30 min-h-10 justify-center"
+        class="ml-4 min-w-30 min-h-10 justify-center uppercase"
     >{{ showMoreText }}</JButton>
 </template>
 

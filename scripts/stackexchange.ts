@@ -82,8 +82,39 @@ async function getStackExchangeResourceData<T>(resource: StackOverflowUserResour
     console.log('Fetching...', `${url}?${params}`);
 
     const data = await fetch(`${url}?${params}`, { headers })
-        .then(response => response.json())
-        .then((stackoverflowResponse: StackOverflowResponse<T>) => stackoverflowResponse.items);
+        .then(response => response.json() as Promise<StackOverflowResponse<T>>)
+        .then((stackoverflowResponse) => stackoverflowResponse.items);
+
+    return data;
+}
+
+
+// User Profile data
+interface StackExchangeProfileStats {
+    reputation: string
+    badgeHtml: string
+    profileUrl: string
+}
+
+export type AllProfilesResponse = { [K in StackExchangeSite]: StackExchangeProfileStats };
+
+export async function getAllProfilesStats() {
+    const communities = Object.keys(userIds) as StackExchangeSite[];
+
+    const communitiesData = await Promise.all(communities.map(site => getProfileStats(site)));
+
+    return communities.reduce(
+        (result, site, index) => ({ ...result, [site]: communitiesData[index] }),
+        {} as AllProfilesResponse
+    );
+}
+
+async function getProfileStats(site: StackExchangeSite) {
+    const userId = userIds[site];
+    const url = `https://${site}.com/users/flair/${userId}.json`;
+
+    const data = await fetch(url)
+        .then(response => response.json() as Promise<StackExchangeProfileStats>);
 
     return data;
 }

@@ -66,7 +66,6 @@ interface PolygonStyle {
 interface OsmTheme {
   building: PolygonStyle
   highway: PolygonStyle
-  natural: PolygonStyle
 }
 
 const stroke = (color: string, width: number = 1) => new Stroke({ color, width });
@@ -83,25 +82,20 @@ function useStyles(theme: OsmTheme) {
     },
     'highway': {
       '.*': new Style({ stroke: stroke(theme.highway.stroke!, 2) }),
-    },
-    'natural': {
-      '.*': new Style({ image: new CircleStyle({ radius: 2, fill: fill(theme.natural.fill!) }) })
-    },
+    }
   }
 }
 
 function lightTheme(): OsmTheme {
   return {
     building: { stroke: '#3949ab', fill: '#8e99f3' },
-    highway: { stroke: '#171417' },
-    natural: { fill: 'rgba(140, 208, 95, 1.0)' },
+    highway: { stroke: '#3949ab' },
   }
 }
 
 function darkTheme(): OsmTheme {
   return {
     building: { stroke: '#fff', fill: '#5e92f3' },
-    highway: { stroke: '#fff' },
-    natural: { fill: 'rgba(140, 208, 95, 1.0)' },
+    highway: { stroke: '#3949ab' },
   }
 }

@@ -7,10 +7,6 @@
 </template>
 
 <style>
-.navigation {
-    @apply text-gray-800 dark:text-gray-400;
-}
-
 .navigation .router-link-active {
     @apply text-white dark:text-gray-900;
 }
@@ -22,11 +18,10 @@
 
     @apply fixed
         top-0 bottom-0 h-screen
-        bg-light-100 dark:bg-dark-700
+        app-background
         mx-0
         p-10
-        right-0
-        shadow-black;
+        right-0;
 }
 
 .navigation.mobile > ul {

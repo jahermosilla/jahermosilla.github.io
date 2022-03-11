@@ -18,7 +18,9 @@ const { toggle, showBackdrop } = useNavigationMenuActions();
   <Container class="j-container">
     <Header height="var(--header-height)" :items="items">
       <template #prepend>
-        <p class="font-bold text-2xl text-primary dark:text-primary-dark">JHR</p>
+        <p
+          class="font-bold text-2xl text-primary dark:text-primary-dark app-header-background rounded-sm p-2"
+        >JHR</p>
       </template>
 
       <template #append>
@@ -28,6 +30,8 @@ const { toggle, showBackdrop } = useNavigationMenuActions();
 
     <ClientOnly>
       <Backdrop @click="toggle" :visible="showBackdrop" />
+
+      <ScrollTop />
     </ClientOnly>
 
     <RouterView v-slot="{ Component: component, route }">

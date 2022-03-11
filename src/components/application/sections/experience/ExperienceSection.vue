@@ -10,7 +10,7 @@ const computeIcon = (experienceType: string) => experienceType === 'education'
 </script>
 
 <template>
-    <JSection title="Studies & Experience">
+    <JSection title="Education & Experience">
         <JTimeline>
             <JTimelineItem v-for="experience in experiences">
                 <template #icon>

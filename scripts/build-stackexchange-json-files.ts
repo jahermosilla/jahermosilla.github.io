@@ -2,12 +2,20 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { getAllStackoverflowData } from './stackexchange';
+import { getAllStackoverflowData, getAllProfilesStats } from './stackexchange';
 
 (async function main() {
-    const data = await getAllStackoverflowData();
+    const [featuredData, profiles] = await Promise.all([
+        getAllStackoverflowData(),
+        getAllProfilesStats()
+    ]);
 
-    const file = path.join(__dirname, '../src/assets/stackexchange.json');
-
-    fs.writeFile(file, JSON.stringify(data, null, 2), { encoding: 'utf-8' });
+    await Promise.all([
+        writeJson(path.join(__dirname, '../src/assets/stackexchange.json'), featuredData),
+        writeJson(path.join(__dirname, '../src/assets/stackexchange-profiles.json'), profiles)
+    ]);
 })();
+
+async function writeJson(filePath: string, data: object) {
+    await fs.writeFile(filePath, JSON.stringify(data, null, 2), { encoding: 'utf-8' });
+}

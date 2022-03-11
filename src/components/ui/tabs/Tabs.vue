@@ -80,13 +80,13 @@ onBeforeUnmount(() => { listeners.forEach(listener => listener()); });
         uppercase
         text-base
         font-normal
-        text-gray-500
+        text-gray-600
         rounded-t-sm
         dark:(text-gray-300);
 }
 
 .menu-btn:hover {
-    @apply bg-gray-100/60 dark:bg-gray-800/60;
+    @apply bg-primary/10 dark:bg-primary-dark/10;
 }
 
 .indicator {

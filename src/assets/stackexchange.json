@@ -8,7 +8,7 @@
           "electron",
           "electron-builder"
         ],
-        "view_count": 20167,
+        "view_count": 20360,
         "score": 24,
         "creation_date": 1481987402,
         "question_id": 41199981,
@@ -21,7 +21,7 @@
           "progressive-web-apps",
           "manifest.json"
         ],
-        "view_count": 15925,
+        "view_count": 16207,
         "score": 22,
         "creation_date": 1533911107,
         "question_id": 51788623,
@@ -35,7 +35,7 @@
           "declaration",
           "destructuring"
         ],
-        "view_count": 8293,
+        "view_count": 8442,
         "score": 15,
         "creation_date": 1471653474,
         "question_id": 39049399,
@@ -50,8 +50,8 @@
           "any",
           "unnest"
         ],
-        "view_count": 14258,
-        "score": 11,
+        "view_count": 14498,
+        "score": 12,
         "creation_date": 1452177023,
         "question_id": 34657669,
         "link": "https://stackoverflow.com/questions/34657669/find-rows-where-text-array-contains-value-similar-to-input",
@@ -63,7 +63,7 @@
           "arrays",
           "map-function"
         ],
-        "view_count": 3004,
+        "view_count": 3041,
         "score": 9,
         "creation_date": 1464363962,
         "question_id": 37487602,
@@ -76,7 +76,7 @@
           "postgresql",
           "event-triggers"
         ],
-        "view_count": 629,
+        "view_count": 637,
         "score": 5,
         "creation_date": 1475957716,
         "question_id": 39936923,
@@ -88,7 +88,7 @@
           "angular",
           "angular-pipe"
         ],
-        "view_count": 2463,
+        "view_count": 2484,
         "score": 3,
         "creation_date": 1489956890,
         "question_id": 42892143,
@@ -101,7 +101,7 @@
           "node.js",
           "postgresql"
         ],
-        "view_count": 13468,
+        "view_count": 13630,
         "score": 2,
         "creation_date": 1452826777,
         "question_id": 34803691,
@@ -127,7 +127,7 @@
         "tags": [
           "angular"
         ],
-        "view_count": 646,
+        "view_count": 647,
         "score": 2,
         "creation_date": 1497717192,
         "question_id": 44606895,
@@ -154,7 +154,7 @@
           "postgresql",
           "aggregate-functions"
         ],
-        "view_count": 832,
+        "view_count": 835,
         "score": 1,
         "creation_date": 1446577262,
         "question_id": 33507030,
@@ -166,7 +166,7 @@
           "javascript",
           "openlayers-3"
         ],
-        "view_count": 501,
+        "view_count": 504,
         "score": 1,
         "creation_date": 1447213901,
         "question_id": 33643989,
@@ -180,7 +180,7 @@
           "loops",
           "scope"
         ],
-        "view_count": 34,
+        "view_count": 36,
         "score": 1,
         "creation_date": 1467219362,
         "question_id": 38105809,
@@ -193,7 +193,7 @@
           "firefox",
           "strict"
         ],
-        "view_count": 392,
+        "view_count": 394,
         "score": 1,
         "creation_date": 1467685235,
         "question_id": 38194322,
@@ -205,7 +205,7 @@
           "sql",
           "postgresql"
         ],
-        "view_count": 241,
+        "view_count": 244,
         "score": 1,
         "creation_date": 1486400198,
         "question_id": 42073185,
@@ -241,7 +241,7 @@
           "if-statement",
           "schema"
         ],
-        "view_count": 1171,
+        "view_count": 1172,
         "score": 0,
         "creation_date": 1412517593,
         "question_id": 26203243,
@@ -278,7 +278,7 @@
           "android",
           "surfaceview"
         ],
-        "view_count": 51,
+        "view_count": 52,
         "score": 0,
         "creation_date": 1437929636,
         "question_id": 31639541,
@@ -317,7 +317,7 @@
           "console",
           "tostring"
         ],
-        "view_count": 199,
+        "view_count": 200,
         "score": 0,
         "creation_date": 1464718982,
         "question_id": 37553010,
@@ -330,7 +330,7 @@
           "css",
           "openlayers-3"
         ],
-        "view_count": 597,
+        "view_count": 600,
         "score": 0,
         "creation_date": 1474387755,
         "question_id": 39598984,
@@ -358,7 +358,7 @@
           "postgresql-9.5",
           "event-triggers"
         ],
-        "view_count": 123,
+        "view_count": 125,
         "score": 0,
         "creation_date": 1476029590,
         "question_id": 39945717,
@@ -371,7 +371,7 @@
           "triggers",
           "plpgsql"
         ],
-        "view_count": 52,
+        "view_count": 53,
         "score": 0,
         "creation_date": 1476651251,
         "question_id": 40075358,
@@ -626,7 +626,7 @@
           "express",
           "autenticaci&#243;n"
         ],
-        "view_count": 1687,
+        "view_count": 1712,
         "score": 5,
         "creation_date": 1473782789,
         "question_id": 23643,
@@ -638,7 +638,7 @@
           "funciones",
           "typescript"
         ],
-        "view_count": 505,
+        "view_count": 507,
         "score": 4,
         "creation_date": 1470236547,
         "question_id": 18508,
@@ -665,7 +665,7 @@
           "typescript",
           "system.js"
         ],
-        "view_count": 8935,
+        "view_count": 8964,
         "score": 2,
         "creation_date": 1469802487,
         "question_id": 18118,
@@ -678,7 +678,7 @@
           "html5",
           "css3"
         ],
-        "view_count": 323,
+        "view_count": 325,
         "score": 2,
         "creation_date": 1474465965,
         "question_id": 24542,
@@ -703,7 +703,7 @@
           "postgresql",
           "postgis"
         ],
-        "view_count": 257,
+        "view_count": 261,
         "score": 2,
         "creation_date": 1486230305,
         "question_id": 47768,
@@ -728,7 +728,7 @@
           "javascript",
           "regex"
         ],
-        "view_count": 373,
+        "view_count": 380,
         "score": 2,
         "creation_date": 1520093980,
         "question_id": 143095,
@@ -753,7 +753,7 @@
           "json",
           "spring"
         ],
-        "view_count": 587,
+        "view_count": 596,
         "score": 2,
         "creation_date": 1554477573,
         "question_id": 251951,
@@ -766,7 +766,7 @@
           "funciones",
           "loops"
         ],
-        "view_count": 115,
+        "view_count": 116,
         "score": 1,
         "creation_date": 1467213915,
         "question_id": 15406,
@@ -779,7 +779,7 @@
           "sobrecarga",
           "constructor"
         ],
-        "view_count": 4310,
+        "view_count": 4362,
         "score": 1,
         "creation_date": 1472664922,
         "question_id": 22186,
@@ -791,7 +791,7 @@
           "javascript",
           "html5"
         ],
-        "view_count": 1092,
+        "view_count": 1093,
         "score": 1,
         "creation_date": 1478122498,
         "question_id": 31411,
@@ -803,7 +803,7 @@
           "python",
           "regex"
         ],
-        "view_count": 546,
+        "view_count": 551,
         "score": 1,
         "creation_date": 1478741621,
         "question_id": 32878,
@@ -815,7 +815,7 @@
           "c++",
           "loops"
         ],
-        "view_count": 106,
+        "view_count": 108,
         "score": 1,
         "creation_date": 1481301712,
         "question_id": 38364,
@@ -829,7 +829,7 @@
           "matrices",
           "numpy"
         ],
-        "view_count": 8700,
+        "view_count": 8724,
         "score": 1,
         "creation_date": 1481673383,
         "question_id": 39070,
@@ -841,7 +841,7 @@
           "css",
           "css3"
         ],
-        "view_count": 235,
+        "view_count": 238,
         "score": 1,
         "creation_date": 1488837660,
         "question_id": 53527,
@@ -854,7 +854,7 @@
           "python-3.x",
           "excepciones"
         ],
-        "view_count": 161,
+        "view_count": 162,
         "score": 1,
         "creation_date": 1508518133,
         "question_id": 111029,
@@ -867,7 +867,7 @@
           "css",
           "electron"
         ],
-        "view_count": 482,
+        "view_count": 490,
         "score": 0,
         "creation_date": 1473089005,
         "question_id": 22650,
@@ -880,7 +880,7 @@
           "system.js",
           "angular-material"
         ],
-        "view_count": 178,
+        "view_count": 179,
         "score": 0,
         "creation_date": 1487695740,
         "question_id": 50788,
@@ -891,7 +891,7 @@
         "tags": [
           "postgresql"
         ],
-        "view_count": 81,
+        "view_count": 82,
         "score": 0,
         "creation_date": 1492887137,
         "question_id": 64798,
@@ -902,7 +902,7 @@
         "tags": [
           "typescript"
         ],
-        "view_count": 357,
+        "view_count": 359,
         "score": 0,
         "creation_date": 1494192444,
         "question_id": 68099,
@@ -1132,7 +1132,7 @@
           "linestring",
           "centroids"
         ],
-        "view_count": 5421,
+        "view_count": 5462,
         "score": 10,
         "creation_date": 1462899591,
         "question_id": 193027,
@@ -1145,7 +1145,7 @@
           "sld",
           "getlegendgraphic"
         ],
-        "view_count": 1057,
+        "view_count": 1070,
         "score": 6,
         "creation_date": 1515669455,
         "question_id": 267630,
@@ -1158,7 +1158,7 @@
           "gdal",
           "gdal-calc"
         ],
-        "view_count": 800,
+        "view_count": 808,
         "score": 4,
         "creation_date": 1470661081,
         "question_id": 206188,
@@ -1169,7 +1169,7 @@
         "tags": [
           "geoserver"
         ],
-        "view_count": 3437,
+        "view_count": 3488,
         "score": 4,
         "creation_date": 1526040252,
         "question_id": 282560,
@@ -1181,7 +1181,7 @@
           "javascript",
           "openlayers"
         ],
-        "view_count": 620,
+        "view_count": 623,
         "score": 3,
         "creation_date": 1455980297,
         "question_id": 181580,
@@ -1193,7 +1193,7 @@
           "geoserver",
           "style"
         ],
-        "view_count": 825,
+        "view_count": 831,
         "score": 3,
         "creation_date": 1459527103,
         "question_id": 187668,
@@ -1206,7 +1206,7 @@
           "labeling",
           "getlegendgraphic"
         ],
-        "view_count": 236,
+        "view_count": 237,
         "score": 3,
         "creation_date": 1515068979,
         "question_id": 266927,
@@ -1219,7 +1219,7 @@
           "geowebcache",
           "wmts"
         ],
-        "view_count": 149,
+        "view_count": 150,
         "score": 2,
         "creation_date": 1462846495,
         "question_id": 192925,
@@ -1232,7 +1232,7 @@
           "openlayers",
           "geolocation"
         ],
-        "view_count": 8238,
+        "view_count": 8316,
         "score": 1,
         "creation_date": 1456274461,
         "question_id": 181977,
@@ -1244,7 +1244,7 @@
           "openlayers",
           "cesium"
         ],
-        "view_count": 370,
+        "view_count": 373,
         "score": 1,
         "creation_date": 1458580573,
         "question_id": 185944,
@@ -1269,7 +1269,7 @@
           "wfs",
           "wfs-t"
         ],
-        "view_count": 117,
+        "view_count": 118,
         "score": 1,
         "creation_date": 1466054775,
         "question_id": 198652,
@@ -1282,7 +1282,7 @@
           "openlayers",
           "wms"
         ],
-        "view_count": 624,
+        "view_count": 628,
         "score": 1,
         "creation_date": 1474044781,
         "question_id": 210928,
@@ -1295,7 +1295,7 @@
           "security",
           "geoserver-geofence"
         ],
-        "view_count": 303,
+        "view_count": 305,
         "score": 1,
         "creation_date": 1495908307,
         "question_id": 241913,
@@ -1320,7 +1320,7 @@
           "geojson",
           "tile-layer"
         ],
-        "view_count": 191,
+        "view_count": 197,
         "score": 1,
         "creation_date": 1606934957,
         "question_id": 380874,
@@ -1343,7 +1343,7 @@
           "geoserver",
           "geoserver-geofence"
         ],
-        "view_count": 262,
+        "view_count": 266,
         "score": 0,
         "creation_date": 1494417418,
         "question_id": 239879,
@@ -1355,7 +1355,7 @@
           "openlayers",
           "draw-interaction"
         ],
-        "view_count": 820,
+        "view_count": 826,
         "score": 0,
         "creation_date": 1516708171,
         "question_id": 268910,

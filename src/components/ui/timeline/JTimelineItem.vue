@@ -20,8 +20,8 @@
     h-8 w-8
     bg-primary
     dark:bg-primary-dark
-    shadow-light-100 dark:shadow-primary-darker
-    text-light-100 dark:text-primary-dashadow-primary-darker
+    shadow-app-background dark:shadow-app-background-dark
+    text-light-100 dark:text-dark-400
     flex items-center justify-center
     absolute top-5 left-0;
 }
